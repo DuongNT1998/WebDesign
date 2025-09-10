@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Thẻ HTML - Bảng biểu</title>
+</head>
+<body>
+
+  <h1>Thẻ tạo bảng biểu</h1>
+  <p>Bảng trong HTML được tạo bằng thẻ <code>&lt;table&gt;</code> và các thẻ con của nó.</p>
+
+  <hr />
+
+  <h2>1. Các thẻ cơ bản</h2>
+  <ul>
+    <li><code>&lt;table&gt;</code>: Khai báo một bảng.</li>
+    <li><code>&lt;tr&gt;</code> (table row): Tạo một hàng trong bảng.</li>
+    <li><code>&lt;td&gt;</code> (table data): Tạo một ô dữ liệu.</li>
+    <li><code>&lt;th&gt;</code> (table header): Tạo một ô tiêu đề (in đậm, canh giữa mặc định).</li>
+    <li><code>&lt;caption&gt;</code>: Tạo tiêu đề cho bảng (nằm trên bảng).</li>
+    <li><code>&lt;thead&gt;</code>: Nhóm các hàng tiêu đề.</li>
+    <li><code>&lt;tbody&gt;</code>: Nhóm các hàng dữ liệu chính.</li>
+    <li><code>&lt;tfoot&gt;</code>: Nhóm các hàng cuối bảng (ví dụ: tổng cộng).</li>
+  </ul>
+
+  <hr />
+
+  <h2>2. Các thuộc tính quan trọng</h2>
+  <ul>
+    <li><code>border</code>: Độ dày đường viền bảng (vd: border="1").</li>
+    <li><code>cellpadding</code>: Khoảng cách từ nội dung đến viền ô.</li>
+    <li><code>cellspacing</code>: Khoảng cách giữa các ô.</li>
+    <li><code>width</code>, <code>height</code>: Kích thước bảng/ô.</li>
+    <li><code>align</code>: Canh lề của bảng (left, center, right).</li>
+    <li><code>bgcolor</code>: Màu nền bảng hoặc ô.</li>
+    <li><code>colspan</code>: Gộp nhiều cột.</li>
+    <li><code>rowspan</code>: Gộp nhiều hàng.</li>
+  </ul>
+
+  <hr />
+
+  <h2>3. Ví dụ minh họa</h2>
+
+  <table border="1" cellpadding="8" cellspacing="2" width="60%" align="center">
+    <caption><b>Danh sách sinh viên</b></caption>
+    <thead bgcolor="#d9edf7">
+      <tr>
+        <th>MSSV</th>
+        <th>Họ tên</th>
+        <th>Lớp</th>
+        <th>Điểm</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>123</td>
+        <td>Nguyễn Văn A</td>
+        <td>CTK45</td>
+        <td>8.5</td>
+      </tr>
+      <tr>
+        <td>124</td>
+        <td>Trần Thị B</td>
+        <td>CTK45</td>
+        <td>9.0</td>
+      </tr>
+      <tr>
+        <td rowspan="2">125</td>
+        <td>Lê Văn C</td>
+        <td>CTK46</td>
+        <td>7.5</td>
+      </tr>
+      <tr>
+        <td colspan="3" align="center">Chưa cập nhật thêm</td>
+      </tr>
+    </tbody>
+    <tfoot bgcolor="#f2f2f2">
+      <tr>
+        <td colspan="3" align="right"><b>Tổng SV</b></td>
+        <td>3</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <hr />
+
+  
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Thẻ HTML - Tạo liên kết trang</title>
+</head>
+<body>
+
+  <h1>Các thẻ tạo liên kết trang</h1>
+  <p>Dùng thẻ <code>&lt;a&gt;</code> (anchor) để tạo liên kết trong HTML.</p>
+
+  <hr />
+
+  <h2>1. Thuộc tính target</h2>
+  <p>Thuộc tính <code>target</code> xác định trang web sẽ mở ở đâu:</p>
+  <ul>
+    <li><code>target="name"</code> → tải trang vào frame có tên NAME</li>
+    <li><code>target="_blank"</code> → mở trang trong cửa sổ/tab mới</li>
+    <li><code>target="_parent"</code> → mở trong cửa sổ cha</li>
+    <li><code>target="_self"</code> → mặc định, mở ngay trên trang hiện hành</li>
+    <li><code>target="_top"</code> → mở ở cửa sổ cao nhất (thoát khỏi mọi frame)</li>
+  </ul>
+
+  <p>Ví dụ:</p>
+  <a href="https://www.google.com" target="_blank">Mở Google trong tab mới (_blank)</a><br />
+  <a href="https://www.wikipedia.org" target="_self">Mở Wikipedia ngay tại trang hiện hành (_self)</a>
+
+  <hr />
+
+  <h2>2. Phân loại liên kết</h2>
+
+  <h3>a. Liên kết ngoại (External link)</h3>
+  <p>Liên kết đến một trang web khác trên Internet.</p>
+  <a href="https://www.fit.hcmus.edu.vn/" target="_blank">Trang FIT HCMUS</a>
+
+  <h3>b. Liên kết nội (Internal link)</h3>
+  <p>Liên kết đến một phần khác trong <b>cùng trang</b> hoặc đến <b>file khác cùng website</b>.</p>
+
+  <!-- liên kết nội trong cùng trang -->
+  <p><a href="#ketthuc">Nhảy tới phần Kết thúc (trong cùng trang)</a></p>
+
+  <!-- liên kết tới file khác cùng website -->
+  <p><a href="the_html_danh_sach.html">Xem file minh họa danh sách (file cùng thư mục)</a></p>
+
+  <h3>c. Liên kết email (Email link)</h3>
+  <p>Dùng <code>mailto:</code> trong href.</p>
+  <a href="mailto:abc@example.com">Gửi email đến abc@example.com</a>
+
+  <hr />
+
+  <h2>3. Địa chỉ tuyệt đối vs tương đối</h2>
+  <ul>
+    <li><b>Địa chỉ tuyệt đối:</b> đường dẫn đầy đủ trên Internet.<br />
+      Ví dụ: <a href="https://www.youtube.com/">https://www.youtube.com/</a>
+    </li>
+    <li><b>Địa chỉ tương đối:</b> đường dẫn tính từ vị trí file HTML hiện hành.<br />
+      Ví dụ: <a href="the_html_am_thanh.html">the_html_am_thanh.html</a>
+    </li>
+  </ul>
+
+  <hr />
+
+  
+
+</body>
+</html>

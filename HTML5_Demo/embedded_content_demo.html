@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Ví dụ Embedded Content trong HTML5</title>
+</head>
+<body>
+    <header>
+        <h1>Embedded Content trong HTML5</h1>
+        <p>Nhúng nội dung hoặc nguồn bên ngoài vào trang web.</p>
+    </header>
+
+    <section>
+        <h2>1. Thẻ img</h2>
+        <p>Chèn hình ảnh:</p>
+        <img src="cat.png" alt="Ảnh minh họa" width="200">
+    </section>
+
+    <section>
+        <h2>2. Thẻ audio</h2>
+        <p>Chèn file âm thanh:</p>
+        <audio controls>
+            <source src="music1.mp3" type="audio/mpeg">
+            Trình duyệt không hỗ trợ audio.
+        </audio>
+    </section>
+
+    <section>
+        <h2>3. Thẻ video</h2>
+        <p>Chèn video:</p>
+        <video width="320" height="240" controls>
+            <source src="example.mp4" type="video/mp4">
+            Trình duyệt không hỗ trợ video.
+        </video>
+    </section>
+
+    <section>
+        <h2>4. Thẻ iframe</h2>
+        <p>Nhúng một trang web khác:</p>
+        <iframe src="https://www.wikipedia.org" width="400" height="200" title="Wikipedia"></iframe>
+    </section>
+
+    <section>
+        <h2>5. Thẻ embed</h2>
+        <p>Nhúng tài liệu PDF hoặc nội dung khác:</p>
+        <embed src="example.pdf" width="400" height="300" type="application/pdf">
+    </section>
+
+    <section>
+        <h2>6. Thẻ object</h2>
+        <p>Nhúng tài liệu PDF với object:</p>
+        <object data="example.pdf" type="application/pdf" width="400" height="300">
+            Không thể hiển thị tài liệu PDF.
+        </object>
+    </section>
+
+    <section>
+        <h2>7. Thẻ canvas</h2>
+        <p>Canvas để vẽ đồ họa (ở đây chưa có vẽ gì):</p>
+        <canvas id="myCanvas" width="200" height="100">
+            Trình duyệt không hỗ trợ canvas.
+        </canvas>
+    </section>
+
+    <section>
+        <h2>8. Thẻ svg</h2>
+        <p>Ví dụ SVG hình tròn:</p>
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="3" fill="lightgray"></circle>
+        </svg>
+    </section>
+
+    <section>
+        <h2>9. Thẻ math (MathML)</h2>
+        <p>Biểu thức toán học:</p>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <msup>
+                <mi>x</mi>
+                <mn>2</mn>
+            </msup>
+            <mo>+</mo>
+            <mi>y</mi>
+            <mo>=</mo>
+            <mn>10</mn>
+        </math>
+    </section>
+</body>
+</html>

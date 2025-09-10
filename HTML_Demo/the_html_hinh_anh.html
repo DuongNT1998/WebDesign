@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Thẻ HTML - Xử lý hình ảnh</title>
+</head>
+<body>
+
+  <h1>Thẻ HTML xử lý hình ảnh</h1>
+  <p>Các thẻ thường dùng: <code>&lt;img&gt;</code>, <code>&lt;map&gt;</code>, <code>&lt;area&gt;</code>.</p>
+  <hr />
+
+  <h2>1. Thẻ &lt;img&gt;</h2>
+  <p>Dùng để hiển thị hình ảnh.</p>
+
+  <p>Ví dụ hiển thị ảnh từ thư mục cục bộ:</p>
+  <img src="cat.png" alt="Ảnh con mèo" width="200" height="150" />
+
+  <p>Ví dụ hiển thị ảnh từ Internet:</p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg"
+       alt="Mèo dễ thương" width="200" />
+
+  <p><b>Lưu ý:</b>  
+    - <code>src</code>: đường dẫn hình ảnh  
+    - <code>alt</code>: mô tả khi ảnh không hiển thị  
+    - <code>width</code>, <code>height</code>: chỉnh kích thước  
+  </p>
+
+  <hr />
+
+  <h2>2. Thẻ &lt;map&gt; và &lt;area&gt;</h2>
+  <p>Dùng để tạo <b>bản đồ ảnh</b> (image map) — mỗi vùng của ảnh liên kết đến một URL khác nhau.</p>
+
+  <p>Ví dụ: Ảnh có thể click từng vùng khác nhau:</p>
+
+  <!-- Chèn ảnh và liên kết đến map -->
+  <img src="world-map.png" alt="Bản đồ thế giới"
+       usemap="#worldmap" width="400" />
+
+  <!-- Định nghĩa map -->
+  <map name="worldmap">
+    <!-- area: rect (hình chữ nhật) -->
+    <area shape="rect" coords="50,50,150,150"
+          href="https://www.wikipedia.org" alt="Wikipedia"
+          target="_blank" />
+
+    <!-- area: circle (hình tròn) -->
+    <area shape="circle" coords="250,100,50"
+          href="https://www.google.com" alt="Google"
+          target="_blank" />
+
+    <!-- area: poly (đa giác) -->
+    <area shape="poly" coords="300,200,350,250,250,250"
+          href="https://www.youtube.com" alt="YouTube"
+          target="_blank" />
+  </map>
+
+  <p><b>Giải thích:</b></p>
+  <ul>
+    <li><code>usemap="#tênmap"</code>: liên kết ảnh với bản đồ ảnh</li>
+    <li><code>&lt;area&gt;</code> có các thuộc tính:
+      <ul>
+        <li><b>shape</b>: hình dạng vùng (rect, circle, poly)</li>
+        <li><b>coords</b>: tọa độ pixel của vùng</li>
+        <li><b>href</b>: liên kết khi click vào vùng</li>
+        <li><b>alt</b>: mô tả</li>
+      </ul>
+    </li>
+  </ul>
+
+  <hr />
+
+
+
+</body>
+</html>

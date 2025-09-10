@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Thẻ HTML xử lý văn bản - Ví dụ</title>
+</head>
+<body>
+
+  <!-- Trang tiêu đề -->
+  <h1>Thẻ HTML xử lý văn bản — Ví dụ & Giải thích</h1>
+  <p>File này minh họa các thẻ cơ bản xử lý văn bản trong HTML: heading, paragraph, list, horizontal rule, định dạng chữ, link và xuống dòng.</p>
+
+  <hr />
+
+  <!-- Heading -->
+  <h2>1. Tiêu đề (Headings)</h2>
+  <p>Các thẻ <code>&lt;h1&gt;</code> → <code>&lt;h6&gt;</code> dùng để tạo tiêu đề, <code>&lt;h1&gt;</code> là quan trọng nhất (lớn nhất), <code>&lt;h6&gt;</code> nhỏ nhất.</p>
+  <h1>H1 — Tiêu đề cấp 1</h1>
+  <h2>H2 — Tiêu đề cấp 2</h2>
+  <h3>H3 — Tiêu đề cấp 3</h3>
+  <h4>H4 — Tiêu đề cấp 4</h4>
+  <h5>H5 — Tiêu đề cấp 5</h5>
+  <h6>H6 — Tiêu đề cấp 6</h6>
+
+  <hr />
+
+  <!-- Paragraph -->
+  <h2>2. Đoạn văn (Paragraph)</h2>
+  <p>Thẻ <code>&lt;p&gt;</code> dùng để tạo một đoạn văn bản. Trình duyệt sẽ tự tạo khoảng cách (margin) giữa các đoạn.</p>
+  <p>Đây là một ví dụ của một đoạn văn. Bạn có thể có nhiều đoạn <code>&lt;p&gt;</code> liên tiếp.</p>
+
+  <hr />
+
+  <!-- Lists -->
+  <h2>3. Danh sách (Lists)</h2>
+  <p>Thẻ <code>&lt;li&gt;</code> phải nằm bên trong <code>&lt;ul&gt;</code> (unordered list) hoặc <code>&lt;ol&gt;</code> (ordered list).</p>
+
+  <h3>Unordered list (Danh sách không thứ tự)</h3>
+  <ul>
+    <li>Mục 1</li>
+    <li>Mục 2</li>
+    <li>Mục 3</li>
+  </ul>
+
+  <h3>Ordered list (Danh sách có thứ tự)</h3>
+  <ol>
+    <li>Bước 1</li>
+    <li>Bước 2</li>
+    <li>Bước 3</li>
+  </ol>
+
+  <h3>Danh sách lồng nhau</h3>
+  <ul>
+    <li>Trái cây
+      <ol>
+        <li>Táo</li>
+        <li>Chuối</li>
+      </ol>
+    </li>
+    <li>Rau</li>
+  </ul>
+
+  <hr />
+
+  <!-- Horizontal rule -->
+  <h2>4. Đường kẻ ngang (Horizontal Rule)</h2>
+  <p>Thẻ <code>&lt;hr /&gt;</code> chèn một đường kẻ ngang phân tách nội dung.</p>
+  <p>Ví dụ: trước và sau dòng dưới là 2 đoạn khác nhau.</p>
+  <hr />
+  <p>Đoạn sau đường kẻ ngang.</p>
+
+  <hr />
+
+  <!-- Text formatting -->
+  <h2>5. Các thẻ định dạng chuỗi văn bản</h2>
+  <p>Dưới đây là các ví dụ cho <code>&lt;em&gt;</code>, <code>&lt;i&gt;</code>, <code>&lt;b&gt;</code>, và <code>&lt;font&gt;</code>.</p>
+
+  <p><em>em</em> — nhấn mạnh (thường in nghiêng).</p>
+  <p><i>i</i> — in nghiêng (italic).</p>
+  <p><b>b</b> — in đậm (bold).</p>
+
+  <p>
+    <font color="blue">font (ví dụ sử dụng thuộc tính color) — Lưu ý: &lt;font&gt; là thẻ cũ (deprecated) trong HTML hiện đại,
+    nhưng dùng đây để minh họa khi chưa học CSS.</font>
+  </p>
+
+  <!-- Show nested formatting -->
+  <p>Ví dụ kết hợp: <b><i>Văn bản vừa in đậm vừa in nghiêng</i></b>.</p>
+
+  <hr />
+
+  <!-- Hyperlink -->
+  <h2>6. Tạo siêu liên kết (Anchor)</h2>
+  <p>Thẻ <code>&lt;a href="URL"&gt;</code> tạo liên kết. Ví dụ:</p>
+  <p><a href="https://www.wikipedia.org" target="_blank" rel="noopener">Truy cập Wikipedia (mở tab mới)</a></p>
+  <p>Bạn cũng có thể liên kết đến một phần trong cùng trang bằng id:</p>
+  <p><a href="#ketthuc">Nhảy đến phần Kết thúc</a></p>
+
+  <hr />
+
+  <!-- Line break -->
+  <h2>7. Xuống dòng (Line break)</h2>
+  <p>Thẻ <code>&lt;br /&gt;</code> dùng để xuống dòng ngay lập tức bên trong một đoạn.</p>
+
+  <p>Ví dụ: Dòng 1.<br />Dòng 2 xuống dòng bằng &lt;br /&gt;.</p>
+
+  <hr />
+
+  <!-- Code snippets -->
+  <h2>8. Hiển thị mã nguồn (pre và code)</h2>
+  <p>Sử dụng <code>&lt;pre&gt;</code> và <code>&lt;code&gt;</code> để hiển thị ví dụ mã cho sinh viên, ví dụ:</p>
+
+  <pre><code>&lt;p&gt;Đây là một đoạn ví dụ&lt;/p&gt;</code></pre>
+
+  <hr />
+
+  <!-- End / Anchor target -->
+ 
+</body>
+</html>

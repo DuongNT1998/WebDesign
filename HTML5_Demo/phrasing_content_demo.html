@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Ví dụ Phrasing Content trong HTML5</title>
+</head>
+<body>
+    <header>
+        <h1>Phrasing Content trong HTML5</h1>
+    </header>
+
+    <section>
+        <h2>Các thẻ inline và văn bản</h2>
+
+        <p>Thẻ <b>&lt;a&gt;</b>: <a href="https://www.example.com">Liên kết đến Example.com</a></p>
+
+        <p>Thẻ <b>&lt;abbr&gt;</b>: <abbr title="HyperText Markup Language">HTML</abbr> là ngôn ngữ đánh dấu siêu văn bản.</p>
+
+        <p>Thẻ <b>&lt;b&gt;</b>: Đây là chữ <b>in đậm</b>.</p>
+
+        <p>Thẻ <b>&lt;strong&gt;</b>: Đây là chữ <strong>quan trọng</strong>.</p>
+
+        <p>Thẻ <b>&lt;em&gt;</b>: Đây là chữ <em>nhấn mạnh</em>.</p>
+
+        <p>Thẻ <b>&lt;br&gt;</b>: Xuống dòng<br>ở đây.</p>
+
+        <p>Thẻ <b>&lt;wbr&gt;</b>: Trình duyệt có thể ngắt dòng tại từ rấtdàirấtdàirất<wbr>dài này.</p>
+
+        <p>Thẻ <b>&lt;sub&gt;</b> và <b>&lt;sup&gt;</b>: Công thức H<sub>2</sub>O, số mũ 10<sup>2</sup>.</p>
+
+        <p>Thẻ <b>&lt;var&gt;</b>: Biến số <var>x</var> + <var>y</var> = 10.</p>
+
+        <p>Thẻ <b>&lt;bdo&gt;</b>: Viết ngược <bdo dir="rtl">Xin chào</bdo>.</p>
+
+        <p>Thẻ <b>&lt;button&gt;</b>: <button>Bấm vào đây</button></p>
+    </section>
+
+    <section>
+        <h2>Thẻ audio trong Phrasing</h2>
+        <audio controls>
+            <source src="example.mp3" type="audio/mpeg">
+            Trình duyệt của bạn không hỗ trợ thẻ audio.
+        </audio>
+    </section>
+
+    <section>
+        <h2>Thẻ area trong map (dùng với image)</h2>
+        <p>Ảnh có thể click vào từng vùng:</p>
+        <img src="example.jpg" alt="Ảnh demo" usemap="#examplemap" width="300">
+
+        <map name="examplemap">
+            <area shape="rect" coords="0,0,100,100" href="https://www.google.com" alt="Google">
+            <area shape="circle" coords="200,80,50" href="https://www.wikipedia.org" alt="Wikipedia">
+        </map>
+    </section>
+</body>
+</html>
