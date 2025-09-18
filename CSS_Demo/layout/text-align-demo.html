@@ -1,0 +1,122 @@
+<!-- text-align-demo.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Demo CSS Text — text-align</title>
+  <style>
+    body{
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: black;
+      color: #e6eef8;
+      margin: 24px;
+      line-height: 1.5;
+    }
+
+    h1{ font-size: 1.6rem; margin-bottom: .5rem; }
+    .code{ font-family: ui-monospace, monospace; background: rgba(255,255,255,0.05); padding:2px 6px; border-radius:6px; }
+
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.05);
+      padding: 14px;
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+      min-height: 130px;
+    }
+    .sample-title{ font-weight: 700; margin-bottom: 10px; font-size:.95rem; color:#dbe9ff; }
+
+    /* ========= text-align examples ========= */
+    .left    { text-align: left; }
+    .right   { text-align: right; }
+    .center  { text-align: center; }
+    .justify { text-align: justify; }
+    .start   { text-align: start; }
+    .end     { text-align: end; }
+
+    .box{
+      background: rgba(255,255,255,0.05);
+      padding: 10px;
+      border-radius: 6px;
+      min-height: 70px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Demo: CSS Text — text-align</h1>
+  <p class="code">File: <strong>text-align-demo.html</strong></p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="sample-title">1) text-align: left (mặc định)</div>
+      <div class="box left">
+        Văn bản sẽ căn lề trái mặc định.<br>
+        Dòng thứ hai cũng căn trái.
+      </div>
+      <div class="code">.left { text-align: left; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">2) text-align: right</div>
+      <div class="box right">
+        Văn bản được căn sang phải.<br>
+        Dùng khi muốn số hoặc ngày tháng thẳng hàng bên phải.
+      </div>
+      <div class="code">.right { text-align: right; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">3) text-align: center</div>
+      <div class="box center">
+        Văn bản căn giữa.<br>
+        Thường dùng cho tiêu đề.
+      </div>
+      <div class="code">.center { text-align: center; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">4) text-align: justify</div>
+      <div class="box justify">
+        Văn bản được giãn ra để canh đều hai bên trái và phải, tạo cảm giác gọn gàng hơn trong đoạn văn bản dài. Tuy nhiên, có thể xuất hiện khoảng trắng không đều giữa các từ.
+      </div>
+      <div class="code">.justify { text-align: justify; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">5) text-align: start</div>
+      <div class="box start">
+        <p>Với ngôn ngữ từ trái sang phải (LTR) → căn trái.</p>
+        <p style="direction: rtl;">مع اللغة من اليمين إلى اليسار (RTL) → căn phải.</p>
+      </div>
+      <div class="code">.start { text-align: start; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">6) text-align: end</div>
+      <div class="box end">
+        <p>Với ngôn ngữ từ trái sang phải (LTR) → căn phải.</p>
+        <p style="direction: rtl;">مع اللغة من اليمين إلى اليسار (RTL) → căn trái.</p>
+      </div>
+      <div class="code">.end { text-align: end; }</div>
+    </div>
+
+  </div>
+
+  <h2 style="margin-top:24px;font-size:1.1rem;color:#8ccfff">Ghi chú nhanh</h2>
+  <ul>
+    <li><code>left</code>, <code>right</code>, <code>center</code>, <code>justify</code> là 4 giá trị quen thuộc nhất.</li>
+    <li><code>start</code> và <code>end</code> linh hoạt theo chiều viết của ngôn ngữ (LTR hoặc RTL).</li>
+    <li>Để canh giữa theo chiều dọc, không dùng <code>text-align</code> mà dùng Flexbox hoặc Grid.</li>
+  </ul>
+
+</body>
+</html>

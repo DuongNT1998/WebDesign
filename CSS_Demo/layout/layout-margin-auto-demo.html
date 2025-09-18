@@ -1,0 +1,38 @@
+<!-- layout-margin-auto-demo.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Demo CSS Layout — margin:auto</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#0f1724; color:#e6eef8; margin:24px; text-align:center; }
+    h1 { font-size:1.4rem; margin-bottom:1rem; }
+
+    .container {
+      width:600px;
+      height:200px;
+      background:#1e293b;
+      border:2px dashed #38bdf8;
+      margin:0 auto 24px auto; /* căn giữa container */
+    }
+    .box {
+      width:200px; height:100px;
+      background:#38bdf8;
+      color:#0f1724;
+      display:block;
+      margin:auto; /* căn giữa theo chiều ngang trong container */
+      line-height:100px;
+      font-weight:bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Layout — margin:auto</h1>
+
+  <div class="container">
+    <div class="box">margin:auto</div>
+  </div>
+
+  <p>Hộp màu xanh được căn giữa ngang trong khung viền xanh dương.</p>
+</body>
+</html>

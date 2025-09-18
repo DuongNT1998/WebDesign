@@ -1,0 +1,203 @@
+<!-- text-color-demo.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Demo CSS Text — Color</title>
+  <style>
+    /* ===========================
+       Global styles (for demo layout)
+       =========================== */
+    :root{
+      --brand: #0066cc;
+      --accent: hsl(200 90% 50%);
+      --muted: #666;
+      --bg: #0f1724;
+      --card: #0b1220;
+    }
+
+    body{
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg, #071029 0%, #0b1220 100%);
+      color: #e6eef8;
+      margin: 24px;
+      line-height: 1.5;
+    }
+
+    h1{ font-size: 1.6rem; margin-bottom: .25rem; }
+    h2{ font-size: 1.1rem; margin: 18px 0 8px; color: var(--accent); }
+
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.04);
+      padding: 14px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+      min-height: 120px;
+    }
+
+    .sample-title{ font-weight: 700; margin-bottom: 8px; font-size: .95rem; color: #dbe9ff; }
+
+    /* ===========================
+       Examples of text color techniques
+       =========================== */
+
+    /* 1) Named color */
+    .named{ color: tomato; }
+
+    /* 2) Hex */
+    .hex{ color: #ff8800; }
+
+    /* 3) Short hex + opacity (8-digit) */
+    .hex8{ color: #ff8800cc; } /* last two hex digits = alpha */
+
+    /* 4) rgb() and rgba() */
+    .rgb{ color: rgb(34,139,230); }
+    .rgba{ color: rgba(34,139,230,0.6); }
+
+    /* 5) hsl() and hsla() */
+    .hsl{ color: hsl(200 80% 50%); }
+    .hsla{ color: hsl(200 80% 50% / 0.55); } /* modern slash alpha syntax */
+
+    /* 6) CSS variables */
+    .var-brand{ color: var(--brand); }
+    .var-accent{ color: var(--accent); }
+
+    /* 7) currentColor keyword: inherits the 'color' property of parent */
+    .parent{
+      color: mediumseagreen;
+      padding: 6px;
+      border-radius: 6px;
+    }
+    .child-current{
+      color: currentColor; /* same as parent color */
+      font-weight: 700;
+    }
+
+    /* 8) inherit keyword (explicit inheritance) */
+    .inherited{
+      color: inherit;
+      font-style: italic;
+    }
+
+    /* 9) transparent text (makes text invisible but still selectable) */
+    .transparent{ color: transparent; text-shadow: 0 0 1px rgba(0,0,0,0.4); }
+
+    /* 10) Text gradient (using background-clip trick) */
+    .gradient-text{
+      font-weight: 800;
+      font-size: 1.1rem;
+      background: linear-gradient(90deg, #ff7a18, #af002d 40%, #319197 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent; /* needed so background shows through letters */
+    }
+
+    /* 11) Contrast helper: light-on-dark vs dark-on-light */
+    .contrast-row{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    .swatch{
+      width: 110px;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 600;
+    }
+    .swatch.light{ background: #fff; color: #111; border: 1px solid #ddd; }
+    .swatch.dark{ background: #111; color: #fff; border: 1px solid rgba(255,255,255,0.06); }
+
+    /* small code style */
+    .code{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace; font-size:.9rem; background:rgba(255,255,255,0.02); padding:4px 6px; border-radius:6px; }
+  </style>
+</head>
+<body>
+  <h1>Demo: CSS Text - Color</h1>
+  <p class="code">File: <strong>text-color-demo.html</strong></p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="sample-title">1) Named color</div>
+      <p class="named">color: tomato; — tên màu có thể dùng trực tiếp (ví dụ: black, white, red, tomato...)</p>
+      <div class="code">p.named { color: tomato; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">2) Hexadecimal</div>
+      <p class="hex">color: #ff8800; — mã hex 6 chữ số.</p>
+      <p class="hex8">color: #ff8800cc; — hex 8 chữ số (alpha ở cuối).</p>
+      <div class="code">p.hex { color: #ff8800; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">3) rgb() / rgba()</div>
+      <p class="rgb">color: rgb(34,139,230); — không có alpha.</p>
+      <p class="rgba">color: rgba(34,139,230,0.6); — có alpha (độ mờ).</p>
+      <div class="code">p.rgba { color: rgba(34,139,230,0.6); }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">4) hsl() / hsla()</div>
+      <p class="hsl">color: hsl(200 80% 50%); — Hue Saturation Lightness.</p>
+      <p class="hsla">color: hsl(200 80% 50% / 0.55); — alpha bằng dấu gạch chéo.</p>
+      <div class="code">p.hsla { color: hsl(200 80% 50% / 0.55); }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">5) CSS Variables</div>
+      <p class="var-brand">color: var(--brand); — dùng biến để tái sử dụng màu.</p>
+      <p class="var-accent">color: var(--accent);</p>
+      <div class="code">:root{ --brand: #0066cc; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">6) currentColor & inherit</div>
+      <div class="parent">
+        Parent color = <span style="text-decoration:underline">mediumseagreen</span>
+        <div class="child-current">child: color: currentColor;</div>
+        <div class="inherited">child: color: inherit;</div>
+      </div>
+      <div class="code">.child { color: currentColor; /* dùng màu hiện tại của element */ }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">7) Transparent / invisible text</div>
+      <p class="transparent">color: transparent; — chữ "ẩn" nhưng vẫn có thể chọn (select) được.</p>
+      <div class="code">p.transparent { color: transparent; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">8) Text gradient (sáng tạo)</div>
+      <p class="gradient-text">Đoạn text gradient sử dụng background-clip: text.</p>
+      <div class="code">.gradient-text{ background-clip:text; color:transparent; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">9) Contrast examples</div>
+      <div class="contrast-row">
+        <div class="swatch light">Dark text<br><span class="code">color:#111</span></div>
+        <div class="swatch dark">Light text<br><span class="code">color:#fff</span></div>
+      </div>
+      <small style="display:block;margin-top:8px;color:var(--muted)">Lưu ý: luôn kiểm tra độ tương phản (WCAG) nếu cần truy cập cho mọi người.</small>
+    </div>
+
+  </div>
+
+  <h2>Ghi chú nhanh</h2>
+  <ul>
+    <li>Ưu tiên dùng biến CSS (<code>var(--name)</code>) để dễ bảo trì màu toàn bộ trang.</li>
+    <li>Sử dụng alpha (rgba / hsla / hex8) khi cần tạo hiệu ứng mờ/translucent.</li>
+    <li><code>currentColor</code> rất tiện khi muốn các phần tử con dùng cùng màu với phần tử cha (ví dụ icon SVG).</li>
+    <li>Text gradient dùng <code>background-clip: text</code> và <code>color: transparent</code> (cần prefix cho trình duyệt cũ: <code>-webkit-background-clip</code>).</li>
+    <li>Kiểm tra tương phản màu để đảm bảo độ đọc cho người dùng (ví dụ: văn bản nhỏ trên nền sáng/tối).</li>
+  </ul>
+
+</body>
+</html>

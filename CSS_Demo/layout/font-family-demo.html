@@ -1,0 +1,118 @@
+<!-- font-family-demo.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Demo CSS Font — font-family</title>
+  <style>
+    body{
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: #0f1724;
+      color: #e6eef8;
+      margin: 24px;
+      line-height: 1.6;
+    }
+
+    h1{ font-size: 1.6rem; margin-bottom: .5rem; }
+    .code{ font-family: ui-monospace, monospace; background: rgba(255,255,255,0.05); padding:2px 6px; border-radius:6px; }
+
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.05);
+      padding: 14px;
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+    }
+    .sample-title{ font-weight: 700; margin-bottom: 10px; font-size:.95rem; color:#dbe9ff; }
+
+    .box{
+      background: rgba(255,255,255,0.05);
+      padding: 10px;
+      border-radius: 6px;
+      min-height: 70px;
+    }
+
+    /* ===== font-family examples ===== */
+    .serif      { font-family: "Times New Roman", Times, serif; }
+    .sansserif  { font-family: Arial, Helvetica, sans-serif; }
+    .monospace  { font-family: "Courier New", Courier, monospace; }
+    .cursive    { font-family: "Brush Script MT", cursive; }
+    .fantasy    { font-family: Papyrus, fantasy; }
+    .googlefont { font-family: "Roboto", sans-serif; }
+  </style>
+  <!-- Import Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Demo: CSS Font — font-family</h1>
+  <p class="code">File: <strong>font-family-demo.html</strong></p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="sample-title">1) Serif</div>
+      <div class="box serif">
+        Đây là ví dụ sử dụng font serif: Times New Roman.
+      </div>
+      <div class="code">.serif { font-family: "Times New Roman", Times, serif; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">2) Sans-serif</div>
+      <div class="box sansserif">
+        Đây là ví dụ với font sans-serif: Arial.
+      </div>
+      <div class="code">.sansserif { font-family: Arial, Helvetica, sans-serif; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">3) Monospace</div>
+      <div class="box monospace">
+        Đây là ví dụ với font monospace: Courier New.
+      </div>
+      <div class="code">.monospace { font-family: "Courier New", Courier, monospace; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">4) Cursive</div>
+      <div class="box cursive">
+        Đây là ví dụ với font cursive: Brush Script MT.
+      </div>
+      <div class="code">.cursive { font-family: "Brush Script MT", cursive; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">5) Fantasy</div>
+      <div class="box fantasy">
+        Đây là ví dụ với font fantasy: Papyrus.
+      </div>
+      <div class="code">.fantasy { font-family: Papyrus, fantasy; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">6) Google Font</div>
+      <div class="box googlefont">
+        Đây là ví dụ với font Google Roboto.
+      </div>
+      <div class="code">.googlefont { font-family: "Roboto", sans-serif; }</div>
+    </div>
+
+  </div>
+
+  <h2 style="margin-top:24px;font-size:1.1rem;color:#8ccfff">Ghi chú nhanh</h2>
+  <ul>
+    <li>Các họ chính: <code>serif</code>, <code>sans-serif</code>, <code>monospace</code>, <code>cursive</code>, <code>fantasy</code>.</li>
+    <li>Luôn khai báo danh sách fallback fonts (ví dụ: <code>Arial, Helvetica, sans-serif</code>).</li>
+    <li>Google Fonts có thể import qua thẻ <code>&lt;link&gt;</code> hoặc <code>@import</code> trong CSS.</li>
+  </ul>
+
+</body>
+</html>

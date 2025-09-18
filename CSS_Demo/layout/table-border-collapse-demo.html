@@ -1,0 +1,33 @@
+<!-- table-border-collapse-demo.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Demo CSS Table — border-collapse</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#0f1724; color:#e6eef8; margin:24px; }
+    h1 { font-size:1.4rem; margin-bottom:.5rem; }
+
+    table { margin-bottom:20px; }
+    th, td { border:1px solid #475569; padding:8px 14px; }
+
+    .separate { border-collapse: separate; }
+    .collapse { border-collapse: collapse; }
+  </style>
+</head>
+<body>
+  <h1>CSS Table — border-collapse</h1>
+
+  <h3>1) border-collapse: separate (mặc định)</h3>
+  <table class="separate">
+    <tr><th>A</th><th>B</th><th>C</th></tr>
+    <tr><td>1</td><td>2</td><td>3</td></tr>
+  </table>
+
+  <h3>2) border-collapse: collapse</h3>
+  <table class="collapse">
+    <tr><th>A</th><th>B</th><th>C</th></tr>
+    <tr><td>1</td><td>2</td><td>3</td></tr>
+  </table>
+</body>
+</html>

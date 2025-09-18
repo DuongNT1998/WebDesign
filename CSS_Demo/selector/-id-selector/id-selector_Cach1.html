@@ -1,0 +1,120 @@
+<!-- demo-id-selector.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Demo ID Selector trong CSS</title>
+  <style>
+    /* -------------- ID selectors (bộ chọn theo id) -------------- */
+    /* chọn phần tử có id="site-header" */
+    #site-header {
+      background: linear-gradient(90deg, #0f172a, #0b63ff);
+      color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(2,6,23,0.25);
+    }
+
+    /* id trên thẻ cụ thể (có specificity cao hơn so với selector element cơ bản) */
+    header#site-header h1 {
+      margin: 0;
+      font-size: 26px;
+      letter-spacing: -0.4px;
+    }
+
+    /* id dùng để style panel bên phải */
+    #side-panel {
+      width: 260px;
+      padding: 16px;
+      background: #ffffff;
+      border: 1px solid #e6eefc;
+      border-radius: 10px;
+    }
+
+    /* id cho button đặc biệt */
+    #primary-btn {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 8px;
+      background: #0b63ff;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 6px 12px rgba(11,99,255,0.18);
+      cursor: pointer;
+      border: 0;
+    }
+
+    #primary-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(11,99,255,0.18);
+    }
+
+    /* id có thể kết hợp pseudo-class */
+    #primary-btn:active {
+      transform: translateY(0);
+      opacity: 0.95;
+    }
+
+    /* id cùng tên nhưng trên các phần tử khác nhau — id nên duy nhất trong DOM, tránh trùng */
+    /* ví dụ minh hoạ: không nên có 2 phần tử cùng id trong trang thực tế */
+    
+    /* Layout cơ bản */
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      margin: 24px;
+      background: #f3f7ff;
+      color: #0f172a;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 20px;
+      align-items: start;
+    }
+
+    article {
+      background: white;
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(2,6,23,0.04);
+    }
+
+    footer {
+      margin-top: 18px;
+      font-size: 0.9rem;
+      color: #374151;
+    }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <h1>Trang mẫu — ID Selector</h1>
+    <p style="margin:6px 0 0 0; opacity:0.9;">Ví dụ minh hoạ cách sử dụng <strong>id selector</strong> trong CSS</p>
+  </header>
+
+  <main class="container" style="margin-top:18px;">
+    <article>
+      <h2>Giải thích nhanh</h2>
+      <p>ID selector dùng dấu # theo sau tên id, ví dụ <code>#main</code> — áp dụng cho phần tử có attribute <code>id="main"</code>.</p>
+      <p>Specificity: id selector có specificity cao hơn element selector và class selector, vì vậy dễ dùng để ghi đè style mặc định.</p>
+
+      <h3>Ví dụ nút</h3>
+      <p><button id="primary-btn">Nút chính (id)</button></p>
+
+      <footer>
+        <p>Ghi chú: Mỗi id nên duy nhất trong một trang HTML.</p>
+      </footer>
+    </article>
+
+    <aside id="side-panel">
+      <h3>Side panel (id)</h3>
+      <p>Panel này dùng id <code>side-panel</code> để style riêng.</p>
+      <p><a id="primary-btn" href="#" style="display:inline-block; margin-top:8px;">(Không nên lặp id!)</a></p>
+      <small>Lưu ý: đoạn trên minh hoạ KỊ tránh trùng id — đừng lặp trong trang thật.</small>
+    </aside>
+  </main>
+</body>
+</html>

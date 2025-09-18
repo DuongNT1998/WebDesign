@@ -1,0 +1,103 @@
+<!-- text-indent-demo.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Demo CSS Text — text-indent</title>
+  <style>
+    body{
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: #0f1724;
+      color: #e6eef8;
+      margin: 24px;
+      line-height: 1.6;
+    }
+
+    h1{ font-size: 1.6rem; margin-bottom: .5rem; }
+    .code{ font-family: ui-monospace, monospace; background: rgba(255,255,255,0.05); padding:2px 6px; border-radius:6px; }
+
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.05);
+      padding: 14px;
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+    }
+    .sample-title{ font-weight: 700; margin-bottom: 10px; font-size:.95rem; color:#dbe9ff; }
+
+    .box{
+      background: rgba(255,255,255,0.05);
+      padding: 10px;
+      border-radius: 6px;
+      min-height: 90px;
+    }
+
+    /* ===== text-indent examples ===== */
+    .indent-30px { text-indent: 30px; }
+    .indent-10p  { text-indent: 10%; }
+    .negative    { text-indent: -2em; }
+    .hanging     { text-indent: -2em; padding-left: 2em; }
+  </style>
+</head>
+<body>
+  <h1>Demo: CSS Text — text-indent</h1>
+  <p class="code">File: <strong>text-indent-demo.html</strong></p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="sample-title">1) text-indent: 30px</div>
+      <div class="box indent-30px">
+        Đây là một đoạn văn có thụt đầu dòng 30px. Thuộc tính <code>text-indent</code> được áp dụng cho dòng đầu tiên của đoạn văn.
+      </div>
+      <div class="code">.indent-30px { text-indent: 30px; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">2) text-indent: 10%</div>
+      <div class="box indent-10p">
+        Đoạn văn này thụt đầu dòng theo tỉ lệ 10% chiều rộng của phần tử cha. Nếu khung rộng, khoảng thụt cũng lớn hơn.
+      </div>
+      <div class="code">.indent-10p { text-indent: 10%; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">3) Giá trị âm (negative)</div>
+      <div class="box negative">
+        Dòng đầu tiên bị kéo ngược vào bên trái với giá trị <code>-2em</code>. Thường dùng để tạo kiểu danh sách đặc biệt hoặc chú thích.
+      </div>
+      <div class="code">.negative { text-indent: -2em; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">4) Hanging indent (thụt dòng treo)</div>
+      <div class="box hanging">
+        Kỹ thuật "hanging indent": dòng đầu tiên nhô ra ngoài, còn các dòng tiếp theo thì thụt vào. Ứng dụng trong tài liệu tham khảo, thư mục (bibliography).
+      </div>
+      <div class="code">
+        .hanging {<br>
+        &nbsp;&nbsp;text-indent: -2em;<br>
+        &nbsp;&nbsp;padding-left: 2em;<br>
+        }
+      </div>
+    </div>
+
+  </div>
+
+  <h2 style="margin-top:24px;font-size:1.1rem;color:#8ccfff">Ghi chú nhanh</h2>
+  <ul>
+    <li><code>text-indent</code> chỉ áp dụng cho dòng đầu tiên của đoạn văn bản.</li>
+    <li>Có thể dùng đơn vị tuyệt đối (px, em) hoặc tương đối (%).</li>
+    <li>Giá trị âm thường dùng để tạo hiệu ứng đặc biệt (ví dụ hanging indent).</li>
+  </ul>
+
+</body>
+</html>

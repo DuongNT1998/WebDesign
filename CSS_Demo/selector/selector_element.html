@@ -1,0 +1,151 @@
+<!-- file: demo-element-selector.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Demo Element Selector</title>
+  <style>
+    /* ---------------------------
+       1) Basic element selectors
+       --------------------------- */
+    body {
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      line-height: 1.6;
+      margin: 24px;
+      background: #f7f9fc;
+      color: #1f2937;
+    }
+
+    h1 {
+      /* element selector áp dụng cho mọi <h1> */
+      font-size: 28px;
+      margin-bottom: 12px;
+      color: #0b5fff;
+      letter-spacing: -0.5px;
+    }
+
+    p {
+      /* element selector áp dụng cho mọi <p> */
+      margin: 0 0 12px 0;
+      color: #374151;
+    }
+
+    a {
+      /* element selector áp dụng cho mọi <a> */
+      color: #0b5fff;
+      text-decoration: none; /* gỡ gạch chân mặc định */
+      border-bottom: 1px dashed rgba(11,95,255,0.25);
+    }
+
+    /* ---------------------------
+       2) Grouping element selectors
+       --------------------------- */
+    h2, h3, h4 {
+      margin-top: 18px;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    /* ---------------------------
+       3) Element selector + pseudo-class
+       --------------------------- */
+    a:hover {
+      text-decoration: underline;
+      opacity: 0.9;
+    }
+
+    /* ---------------------------
+       4) More specific rules (element + class / id)
+       --------------------------- */
+    /* Nếu bạn muốn style chỉ áp dụng cho các p có class .lead */
+    p.lead {
+      font-size: 1.05rem;
+      color: #111827;
+      margin-bottom: 18px;
+    }
+
+    /* ID + element — ưu tiên hơn element selector thuần */
+    #main-title h1 {
+      color: #1a73e8;
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+
+    /* ---------------------------
+       5) Reset / universal vs element
+       --------------------------- */
+    /* universal selector (*) áp dụng cho mọi phần tử (dùng thận trọng) */
+    * {
+      box-sizing: border-box;
+    }
+
+    /* ---------------------------
+       6) Element selector trong layout
+       --------------------------- */
+    header, footer, main, nav, section {
+      display: block;
+    }
+
+    header {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(15,23,42,0.06);
+      margin-bottom: 20px;
+    }
+
+    /* simple card using element selectors */
+    article {
+      background: #ffffff;
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+      margin-bottom: 12px;
+    }
+
+    button {
+      border: 0;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    /* nếu cần style cho tất cả các input/textarea chung */
+    input, textarea {
+      padding: 8px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <header id="main-title">
+    <h1>Tiêu đề chính (h1)</h1>
+    <nav>
+      <a href="#">Trang chủ</a> · <a href="#">Giới thiệu</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h2>Element selector là gì?</h2>
+      <p class="lead">Element selector chọn phần tử theo tên thẻ HTML. Ví dụ: <code>p { color: red; }</code> sẽ áp dụng cho tất cả thẻ &lt;p&gt;.</p>
+      <p>Element selector rất hữu dụng để thiết lập kiểu mặc định cho cấu trúc văn bản (heading, paragraph, links,...).</p>
+
+      <h3>Một vài ví dụ</h3>
+      <p>Liên kết mặc định: <a href="#">Click vào đây</a></p>
+      <p>Ví dụ nút: <button>Nhấn tôi</button></p>
+    </article>
+
+    <article>
+      <h2>Thêm nội dung mẫu</h2>
+      <p>Đây là một đoạn văn bình thường để kiểm tra style cho element selector.</p>
+      <p>Và một đoạn khác để thấy khoảng cách giữa các &lt;p&gt;.</p>
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2025 — Ví dụ element selector</p>
+  </footer>
+</body>
+</html>

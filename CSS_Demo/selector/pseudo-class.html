@@ -1,0 +1,113 @@
+<!-- demo-pseudo-class.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Demo Pseudo-class Selector</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      margin: 24px;
+      background: #f9fafb;
+      color: #111827;
+    }
+
+    section {
+      background: #ffffff;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    /* -----------------------------
+       Pseudo-class examples
+       ----------------------------- */
+
+    /* hover & active */
+    a {
+      color: #0b63ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    a:active {
+      color: #ff5722;
+    }
+
+    /* focus */
+    input:focus {
+      outline: 2px solid #0b63ff;
+      border-color: #0b63ff;
+    }
+
+    /* first-child, last-child, nth-child */
+    ul li:first-child {
+      font-weight: bold;
+      color: #0b63ff;
+    }
+    ul li:last-child {
+      font-style: italic;
+      color: #ff5722;
+    }
+    ul li:nth-child(2) {
+      background: #f1f5f9;
+    }
+
+    /* not() */
+    p:not(.special) {
+      color: #374151;
+    }
+
+    /* checked */
+    input[type="checkbox"]:checked + label {
+      text-decoration: line-through;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+  <h1>Demo Pseudo-classes</h1>
+
+  <section>
+    <h2>Link với :hover, :active</h2>
+    <p><a href="#">Di chuột vào hoặc click vào link này</a></p>
+  </section>
+
+  <section>
+    <h2>Input với :focus</h2>
+    <input type="text" placeholder="Click vào đây để thấy hiệu ứng focus" />
+  </section>
+
+  <section>
+    <h2>Danh sách với :first-child, :last-child, :nth-child</h2>
+    <ul>
+      <li>Mục 1 (first-child)</li>
+      <li>Mục 2 (nth-child(2))</li>
+      <li>Mục 3</li>
+      <li>Mục 4 (last-child)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>:not()</h2>
+    <p>Đây là đoạn văn thường.</p>
+    <p class="special">Đây là đoạn có class special (không bị style bởi :not).</p>
+  </section>
+
+  <section>
+    <h2>:checked</h2>
+    <p>
+      <input type="checkbox" id="task1" />
+      <label for="task1">Hoàn thành bài tập CSS</label>
+    </p>
+    <p>
+      <input type="checkbox" id="task2" />
+      <label for="task2">Đọc tài liệu HTML</label>
+    </p>
+  </section>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!-- layout-display-demo.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Demo CSS Layout — display</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#0f1724; color:#e6eef8; margin:24px; }
+    h1 { font-size:1.4rem; margin-bottom:1rem; }
+
+    .box {
+      background:#38bdf8;
+      color:#0f1724;
+      padding:8px;
+      margin:6px;
+      border:2px solid #0ea5e9;
+    }
+    .inline { display:inline; }
+    .block { display:block; width:120px; }
+    .inline-block { display:inline-block; width:120px; height:60px; }
+    .none { display:none; }
+  </style>
+</head>
+<body>
+  <h1>CSS Layout — display</h1>
+
+  <h3>1) display: inline</h3>
+  <p>
+    Văn bản trước <span class="box inline">inline</span> văn bản sau.
+  </p>
+
+  <h3>2) display: block</h3>
+  <div class="box block">block 1</div>
+  <div class="box block">block 2</div>
+
+  <h3>3) display: inline-block</h3>
+  <div class="box inline-block">inline-block 1</div>
+  <div class="box inline-block">inline-block 2</div>
+
+  <h3>4) display: none</h3>
+  <p>Hộp này bị ẩn: <span class="box none">none</span> (không hiển thị).</p>
+</body>
+</html>

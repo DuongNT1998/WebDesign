@@ -1,0 +1,85 @@
+<!-- demo-element-class-selector.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Demo Element + Class Selector</title>
+  <style>
+    /* -------------------------------
+       Element + Class selectors
+       ------------------------------- */
+
+    /* chỉ áp dụng cho <p> có class="highlight" */
+    p.highlight {
+      background: #fff3cd;
+      padding: 6px 10px;
+      border-left: 4px solid #ff9800;
+      border-radius: 4px;
+    }
+
+    /* chỉ áp dụng cho <h2> có class="title" */
+    h2.title {
+      color: #0b63ff;
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    /* chỉ áp dụng cho <button> có class="btn-primary" */
+    button.btn-primary {
+      background: #0b63ff;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    /* hover chỉ áp dụng cho button có class btn-primary */
+    button.btn-primary:hover {
+      opacity: 0.9;
+    }
+
+    /* -------------------------------
+       Layout cơ bản
+       ------------------------------- */
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      margin: 24px;
+      background: #f8fafc;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    article {
+      background: white;
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Demo: Kết hợp Element + Class</h1>
+  </header>
+
+  <main>
+    <article>
+      <h2 class="title">Ví dụ tiêu đề</h2>
+      <p>Đây là đoạn văn thường.</p>
+      <p class="highlight">Đây là đoạn văn &lt;p&gt; có class <code>highlight</code>.</p>
+    </article>
+
+    <article>
+      <h2 class="title">Ví dụ nút</h2>
+      <p>
+        <button>Button thường</button>
+        <button class="btn-primary">Button chính</button>
+      </p>
+    </article>
+  </main>
+</body>
+</html>

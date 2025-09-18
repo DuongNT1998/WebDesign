@@ -1,0 +1,148 @@
+<!-- text-decoration-demo.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Demo CSS Text — text-decoration</title>
+  <style>
+    body{
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: #0f1724;
+      color: #e6eef8;
+      margin: 24px;
+      line-height: 1.5;
+    }
+
+    h1{ font-size: 1.6rem; margin-bottom: .5rem; }
+    .code{ font-family: ui-monospace, monospace; background: rgba(255,255,255,0.05); padding:2px 6px; border-radius:6px; }
+
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.05);
+      padding: 14px;
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+      min-height: 130px;
+    }
+    .sample-title{ font-weight: 700; margin-bottom: 10px; font-size:.95rem; color:#dbe9ff; }
+
+    .box{
+      background: rgba(255,255,255,0.05);
+      padding: 10px;
+      border-radius: 6px;
+      min-height: 70px;
+    }
+
+    /* ===== text-decoration examples ===== */
+    .underline      { text-decoration: underline; }
+    .overline       { text-decoration: overline; }
+    .line-through   { text-decoration: line-through; }
+    .none           { text-decoration: none; }
+    .combo          { text-decoration: underline overline; }
+
+    /* Decoration style */
+    .dotted         { text-decoration: underline dotted; }
+    .wavy           { text-decoration: underline wavy red; }
+    .double         { text-decoration: underline double; }
+
+    /* Decoration color + thickness */
+    .custom {
+      text-decoration-line: underline;
+      text-decoration-color: #ff8800;
+      text-decoration-thickness: 3px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Demo: CSS Text — text-decoration</h1>
+  <p class="code">File: <strong>text-decoration-demo.html</strong></p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="sample-title">1) underline</div>
+      <div class="box underline">
+        Văn bản có gạch chân.
+      </div>
+      <div class="code">.underline { text-decoration: underline; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">2) overline</div>
+      <div class="box overline">
+        Văn bản có gạch ở phía trên.
+      </div>
+      <div class="code">.overline { text-decoration: overline; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">3) line-through</div>
+      <div class="box line-through">
+        Văn bản có gạch ngang giữa.
+      </div>
+      <div class="code">.line-through { text-decoration: line-through; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">4) none</div>
+      <div class="box none">
+        Văn bản không có trang trí nào. (Hữu ích để bỏ gạch chân mặc định của thẻ &lt;a&gt;)
+      </div>
+      <div class="code">.none { text-decoration: none; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">5) Kết hợp nhiều dòng</div>
+      <div class="box combo">
+        Văn bản vừa gạch trên vừa gạch dưới.
+      </div>
+      <div class="code">.combo { text-decoration: underline overline; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">6) Kiểu gạch chân</div>
+      <div class="box dotted">
+        underline dotted (chấm).
+      </div>
+      <div class="box double">
+        underline double (hai vạch).
+      </div>
+      <div class="box wavy">
+        underline wavy đỏ (lượn sóng).
+      </div>
+      <div class="code">.wavy { text-decoration: underline wavy red; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">7) Màu sắc & độ dày</div>
+      <div class="box custom">
+        Gạch chân màu cam, dày 3px.
+      </div>
+      <div class="code">
+        .custom {<br>
+        &nbsp;&nbsp;text-decoration-line: underline;<br>
+        &nbsp;&nbsp;text-decoration-color: #ff8800;<br>
+        &nbsp;&nbsp;text-decoration-thickness: 3px;<br>
+        }
+      </div>
+    </div>
+
+  </div>
+
+  <h2 style="margin-top:24px;font-size:1.1rem;color:#8ccfff">Ghi chú nhanh</h2>
+  <ul>
+    <li><code>text-decoration</code> có thể gồm: line (underline, overline, line-through, none), style (solid, dotted, double, wavy...), color, thickness.</li>
+    <li>Dùng <code>text-decoration: none;</code> thường để bỏ gạch chân mặc định của liên kết.</li>
+    <li>Thay vì <code>&lt;u&gt;</code>, hãy dùng CSS để kiểm soát gạch chân.</li>
+  </ul>
+
+</body>
+</html>

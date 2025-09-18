@@ -1,0 +1,117 @@
+<!-- font-weight-demo.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Demo CSS Font — font-weight</title>
+  <style>
+    body{
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: #0f1724;
+      color: #e6eef8;
+      margin: 24px;
+      line-height: 1.6;
+    }
+
+    h1{ font-size: 1.6rem; margin-bottom: .5rem; }
+    .code{ font-family: ui-monospace, monospace; background: rgba(255,255,255,0.05); padding:2px 6px; border-radius:6px; }
+
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.05);
+      padding: 14px;
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+    }
+    .sample-title{ font-weight: 700; margin-bottom: 10px; font-size:.95rem; color:#dbe9ff; }
+
+    .box{
+      background: rgba(255,255,255,0.05);
+      padding: 10px;
+      border-radius: 6px;
+      min-height: 60px;
+    }
+
+    /* ===== font-weight examples ===== */
+    .light    { font-weight: 300; }
+    .normal   { font-weight: 400; }
+    .medium   { font-weight: 500; }
+    .bold     { font-weight: 700; }
+    .bolder   { font-weight: bolder; }
+    .lighter  { font-weight: lighter; }
+  </style>
+</head>
+<body>
+  <h1>Demo: CSS Font — font-weight</h1>
+  <p class="code">File: <strong>font-weight-demo.html</strong></p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="sample-title">1) font-weight: 300 (Light)</div>
+      <div class="box light">
+        Văn bản với font-weight: 300 (mảnh, nhẹ).
+      </div>
+      <div class="code">.light { font-weight: 300; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">2) font-weight: 400 (Normal)</div>
+      <div class="box normal">
+        Văn bản với font-weight: 400 (mặc định).
+      </div>
+      <div class="code">.normal { font-weight: 400; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">3) font-weight: 500 (Medium)</div>
+      <div class="box medium">
+        Văn bản với font-weight: 500 (đậm vừa).
+      </div>
+      <div class="code">.medium { font-weight: 500; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">4) font-weight: 700 (Bold)</div>
+      <div class="box bold">
+        Văn bản với font-weight: 700 (in đậm).
+      </div>
+      <div class="code">.bold { font-weight: 700; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">5) font-weight: bolder</div>
+      <div class="box bolder">
+        Văn bản với font-weight: bolder (đậm hơn phần tử cha).
+      </div>
+      <div class="code">.bolder { font-weight: bolder; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">6) font-weight: lighter</div>
+      <div class="box lighter">
+        Văn bản với font-weight: lighter (mảnh hơn phần tử cha).
+      </div>
+      <div class="code">.lighter { font-weight: lighter; }</div>
+    </div>
+
+  </div>
+
+  <h2 style="margin-top:24px;font-size:1.1rem;color:#8ccfff">Ghi chú nhanh</h2>
+  <ul>
+    <li>Giá trị số thường dùng: 100 → 900 (100 = rất mảnh, 900 = rất đậm).</li>
+    <li><code>normal</code> = 400, <code>bold</code> = 700.</li>
+    <li><code>bolder</code>, <code>lighter</code> phụ thuộc vào font cha.</li>
+    <li>Không phải font nào cũng hỗ trợ đủ các mức (thường chỉ có 400 và 700).</li>
+  </ul>
+
+</body>
+</html>

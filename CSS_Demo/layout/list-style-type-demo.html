@@ -1,0 +1,161 @@
+<!-- list-style-type-demo.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Demo CSS List — list-style-type</title>
+  <style>
+    body{
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: #0f1724;
+      color: #e6eef8;
+      margin: 24px;
+      line-height: 1.6;
+    }
+
+    h1{ font-size: 1.6rem; margin-bottom: .5rem; }
+    .code{ font-family: ui-monospace, monospace; background: rgba(255,255,255,0.05); padding:2px 6px; border-radius:6px; }
+
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.05);
+      padding: 14px;
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+    }
+    .sample-title{ font-weight: 700; margin-bottom: 10px; font-size:.95rem; color:#dbe9ff; }
+
+    .box{
+      background: rgba(255,255,255,0.05);
+      padding: 10px 20px;
+      border-radius: 6px;
+      min-height: 70px;
+    }
+
+    /* ===== list-style-type examples ===== */
+    .disc     { list-style-type: disc; }
+    .circle   { list-style-type: circle; }
+    .square   { list-style-type: square; }
+    .decimal  { list-style-type: decimal; }
+    .lowerroman { list-style-type: lower-roman; }
+    .upperroman { list-style-type: upper-roman; }
+    .loweralpha { list-style-type: lower-alpha; }
+    .upperalpha { list-style-type: upper-alpha; }
+    .none     { list-style-type: none; }
+  </style>
+</head>
+<body>
+  <h1>Demo: CSS List — list-style-type</h1>
+  <p class="code">File: <strong>list-style-type-demo.html</strong></p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="sample-title">1) disc (mặc định)</div>
+      <ul class="box disc">
+        <li>Mục A</li>
+        <li>Mục B</li>
+        <li>Mục C</li>
+      </ul>
+      <div class="code">.disc { list-style-type: disc; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">2) circle</div>
+      <ul class="box circle">
+        <li>Mục A</li>
+        <li>Mục B</li>
+        <li>Mục C</li>
+      </ul>
+      <div class="code">.circle { list-style-type: circle; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">3) square</div>
+      <ul class="box square">
+        <li>Mục A</li>
+        <li>Mục B</li>
+        <li>Mục C</li>
+      </ul>
+      <div class="code">.square { list-style-type: square; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">4) decimal</div>
+      <ol class="box decimal">
+        <li>Mục A</li>
+        <li>Mục B</li>
+        <li>Mục C</li>
+      </ol>
+      <div class="code">.decimal { list-style-type: decimal; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">5) lower-roman</div>
+      <ol class="box lowerroman">
+        <li>Mục A</li>
+        <li>Mục B</li>
+        <li>Mục C</li>
+      </ol>
+      <div class="code">.lowerroman { list-style-type: lower-roman; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">6) upper-roman</div>
+      <ol class="box upperroman">
+        <li>Mục A</li>
+        <li>Mục B</li>
+        <li>Mục C</li>
+      </ol>
+      <div class="code">.upperroman { list-style-type: upper-roman; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">7) lower-alpha</div>
+      <ol class="box loweralpha">
+        <li>Mục A</li>
+        <li>Mục B</li>
+        <li>Mục C</li>
+      </ol>
+      <div class="code">.loweralpha { list-style-type: lower-alpha; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">8) upper-alpha</div>
+      <ol class="box upperalpha">
+        <li>Mục A</li>
+        <li>Mục B</li>
+        <li>Mục C</li>
+      </ol>
+      <div class="code">.upperalpha { list-style-type: upper-alpha; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">9) none</div>
+      <ul class="box none">
+        <li>Mục A</li>
+        <li>Mục B</li>
+        <li>Mục C</li>
+      </ul>
+      <div class="code">.none { list-style-type: none; }</div>
+    </div>
+
+  </div>
+
+  <h2 style="margin-top:24px;font-size:1.1rem;color:#8ccfff">Ghi chú nhanh</h2>
+  <ul>
+    <li><code>list-style-type</code> xác định kiểu ký hiệu đầu dòng cho danh sách.</li>
+    <li>Các giá trị phổ biến: <code>disc</code>, <code>circle</code>, <code>square</code>, <code>decimal</code>, <code>lower-roman</code>, <code>upper-alpha</code>...</li>
+    <li>Dùng <code>none</code> để bỏ hoàn toàn ký hiệu.</li>
+  </ul>
+
+</body>
+</html>
