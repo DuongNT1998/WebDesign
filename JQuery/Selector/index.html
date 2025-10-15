@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery Selectors Demo</title>
+<link rel="stylesheet" href="styles.css">
+<!-- Sử dụng CDN jQuery cho demo -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<header>
+<h1>Demo Selector trong jQuery</h1>
+</header>
+
+
+<section class="controls">
+<button id="btnTag">Select by &lt;p&gt; (tagName)</button>
+<button id="btnId">Select by #identifier</button>
+<button id="btnClass">Select by .className</button>
+<button id="btnTagClass">Select by Tag.className</button>
+<button id="btnAll">Select ALL (*)</button>
+<button id="reset">Reset styles</button>
+</section>
+
+
+<main>
+<p>Đoạn văn 1 (p tag)</p>
+<p class="highlight">Đoạn văn 2 (p.highlight)</p>
+<div class="highlight">Một div có class "highlight"</div>
+<span id="unique">Span có id="unique"</span>
+
+
+<ul>
+<li>Item 1</li>
+<li class="highlight">Item 2 (highlight)</li>
+<li id="special">Item 3 (id special)</li>
+</ul>
+</main>
+
+
+<script src="app.js"></script>
+</body>
+</html>

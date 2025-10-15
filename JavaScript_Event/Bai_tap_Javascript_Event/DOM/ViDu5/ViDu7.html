@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hide/Show Text Example</title>
+<script>
+function hideText() {
+  document.getElementById("myText").style.display = "none";
+}
+
+function showText() {
+  document.getElementById("myText").style.display = "block";
+}
+</script>
+</head>
+<body>
+
+  <p id="myText">Đây là đoạn văn bản sẽ được ẩn hoặc hiển thị khi bạn bấm nút.</p>
+
+  <button onclick="hideText()">Hide Text</button>
+  <button onclick="showText()">Show Text</button>
+</body>
+</html>

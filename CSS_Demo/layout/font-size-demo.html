@@ -1,0 +1,117 @@
+<!-- font-size-demo.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Demo CSS Font — font-size</title>
+  <style>
+    body{
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: #0f1724;
+      color: #e6eef8;
+      margin: 24px;
+      line-height: 1.6;
+    }
+
+    h1{ font-size: 1.6rem; margin-bottom: .5rem; }
+    .code{ font-family: ui-monospace, monospace; background: rgba(255,255,255,0.05); padding:2px 6px; border-radius:6px; }
+
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.05);
+      padding: 14px;
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+    }
+    .sample-title{ font-weight: 700; margin-bottom: 10px; font-size:.95rem; color:#dbe9ff; }
+
+    .box{
+      background: rgba(255,255,255,0.05);
+      padding: 10px;
+      border-radius: 6px;
+      min-height: 70px;
+    }
+
+    /* ===== font-size examples ===== */
+    .px16   { font-size: 16px; }
+    .em2    { font-size: 2em; }
+    .percent150 { font-size: 150%; }
+    .rem2   { font-size: 2rem; }
+    .xxsmall { font-size: xx-small; }
+    .larger { font-size: larger; }
+  </style>
+</head>
+<body>
+  <h1>Demo: CSS Font — font-size</h1>
+  <p class="code">File: <strong>font-size-demo.html</strong></p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="sample-title">1) Đơn vị tuyệt đối (px)</div>
+      <div class="box px16">
+        Văn bản này có font-size: 16px (kích thước cố định).
+      </div>
+      <div class="code">.px16 { font-size: 16px; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">2) Đơn vị tương đối (em)</div>
+      <div class="box em2">
+        font-size: 2em (gấp đôi kích thước font của phần tử cha).
+      </div>
+      <div class="code">.em2 { font-size: 2em; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">3) Đơn vị tương đối (%)</div>
+      <div class="box percent150">
+        font-size: 150% (bằng 1.5 lần kích thước font của phần tử cha).
+      </div>
+      <div class="code">.percent150 { font-size: 150%; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">4) rem (root em)</div>
+      <div class="box rem2">
+        font-size: 2rem (gấp đôi font-size của <code>&lt;html&gt;</code>, không phụ thuộc cha).
+      </div>
+      <div class="code">.rem2 { font-size: 2rem; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">5) Từ khóa tuyệt đối</div>
+      <div class="box xxsmall">
+        font-size: xx-small (một trong các keyword: xx-small → xx-large).
+      </div>
+      <div class="code">.xxsmall { font-size: xx-small; }</div>
+    </div>
+
+    <div class="card">
+      <div class="sample-title">6) Từ khóa tương đối</div>
+      <div class="box larger">
+        font-size: larger (tăng một cấp so với phần tử cha).
+      </div>
+      <div class="code">.larger { font-size: larger; }</div>
+    </div>
+
+  </div>
+
+  <h2 style="margin-top:24px;font-size:1.1rem;color:#8ccfff">Ghi chú nhanh</h2>
+  <ul>
+    <li><code>px</code> cho kích thước cố định; <code>em</code>, <code>%</code> cho tỉ lệ theo phần tử cha.</li>
+    <li><code>rem</code> hữu ích để tạo kích thước font nhất quán theo root.</li>
+    <li><code>smaller</code>, <code>larger</code> thay đổi so với phần tử cha theo cấp.</li>
+    <li>Các keyword tuyệt đối: <code>xx-small</code>, <code>x-small</code>, <code>small</code>, <code>medium</code>, <code>large</code>, <code>x-large</code>, <code>xx-large</code>.</li>
+  </ul>
+
+</body>
+</html>

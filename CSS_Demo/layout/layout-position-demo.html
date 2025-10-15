@@ -1,0 +1,67 @@
+<!-- layout-position-demo.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Demo CSS Layout — position</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#0f1724; color:#e6eef8; margin:24px; }
+    h1 { font-size:1.4rem; margin-bottom:1rem; }
+
+    .container {
+      position: relative;
+      width: 400px;
+      height: 250px;
+      border: 2px dashed #38bdf8;
+      background:#1e293b;
+      margin-bottom:20px;
+    }
+    .box {
+      width:100px; height:60px;
+      background:#334155;
+      border:2px solid #facc15;
+      color:#facc15;
+      text-align:center;
+      line-height:60px;
+    }
+    .static { position: static; }
+    .relative { position: relative; top:20px; left:20px; }
+    .absolute { position: absolute; top:50px; right:20px; }
+    .fixed {
+      position: fixed; bottom:10px; right:10px;
+      background:#f87171; border-color:#f87171; color:#fff;
+    }
+    .sticky {
+      position: sticky; top:0;
+      background:#22c55e; border-color:#22c55e; color:#fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Layout — position</h1>
+
+  <h3>1) static (mặc định)</h3>
+  <div class="container">
+    <div class="box static">static</div>
+  </div>
+
+  <h3>2) relative</h3>
+  <div class="container">
+    <div class="box relative">relative</div>
+  </div>
+
+  <h3>3) absolute</h3>
+  <div class="container">
+    <div class="box absolute">absolute</div>
+  </div>
+
+  <h3>4) fixed</h3>
+  <p>Hộp "fixed" sẽ luôn nằm ở góc dưới bên phải màn hình.</p>
+  <div class="box fixed">fixed</div>
+
+  <h3>5) sticky</h3>
+  <p>Cuộn xuống để thấy hiệu ứng sticky:</p>
+  <div class="box sticky">sticky</div>
+  <p style="height:500px;">Nội dung dài để thử cuộn trang...</p>
+</body>
+</html>

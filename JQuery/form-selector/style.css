@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f9fafc;
+    margin: 40px;
+}
+
+h1 {
+    color: #1a73e8;
+    margin-bottom: 20px;
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #ccc;
+}
+
+label {
+    display: inline-block;
+    width: 120px;
+    margin-top: 10px;
+}
+
+#result {
+    margin-top: 20px;
+    background: #eef5ff;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+}

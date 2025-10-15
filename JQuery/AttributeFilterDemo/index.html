@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Attribute Filter Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <h1>🔍 Demo: Attribute Filter trong jQuery</h1>
+
+    <div class="filter-buttons">
+        <button id="all">Hiện tất cả</button>
+        <button id="hasTitle">Có thuộc tính title</button>
+        <button id="noAlt">Không có thuộc tính alt</button>
+        <button id="priceOver50">Giá &gt; 50</button>
+    </div>
+
+    <div class="product-list">
+        <img src="https://via.placeholder.com/100" alt="product1" title="Áo thun" data-price="45">
+        <img src="https://via.placeholder.com/100" title="Quần jeans" data-price="60">
+        <img src="https://via.placeholder.com/100" alt="product3" data-price="75">
+        <img src="https://via.placeholder.com/100" title="Mũ lưỡi trai" alt="product4" data-price="30">
+        <img src="https://via.placeholder.com/100" data-price="90">
+    </div>
+
+</body>
+</html>

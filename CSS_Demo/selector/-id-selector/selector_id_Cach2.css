@@ -1,0 +1,52 @@
+/* styles.css */
+/* ID selectors */
+#site-header{
+  background: linear-gradient(90deg,#0f172a,#0b63ff);
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+header#site-header h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+/* side panel */
+#side-panel {
+  width: 260px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #e6eefc;
+  border-radius: 10px;
+}
+
+/* primary button by id */
+#primary-btn {
+  display:inline-block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #0b63ff;
+  color: #fff;
+  font-weight:600;
+  border:0;
+  cursor:pointer;
+}
+
+#primary-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* layout */
+body{
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  margin:24px;
+  background:#f3f7ff;
+  color:#0f172a;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 20px;
+}

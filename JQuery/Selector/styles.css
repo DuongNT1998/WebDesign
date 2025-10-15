@@ -1,0 +1,28 @@
+/* styles.css */
+body {
+font-family: Arial, sans-serif;
+margin: 24px;
+}
+header h1 {
+margin-bottom: 16px;
+}
+.controls {
+margin-bottom: 20px;
+}
+.controls button {
+margin-right: 8px;
+padding: 6px 10px;
+}
+
+
+/* class dùng để highlight khi selector chọn */
+.selector-hit {
+outline: 3px solid rgba(255,165,0,0.9);
+background: rgba(255,250,220,0.6);
+}
+
+
+/* thêm 1 kiểu cho trạng thái được chọn bằng universal */
+.selector-all {
+transform: scale(1.02);
+}

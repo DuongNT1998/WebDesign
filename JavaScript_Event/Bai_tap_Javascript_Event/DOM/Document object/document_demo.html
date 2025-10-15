@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo Document DOM</title>
+  <style>
+    #content { margin-top: 15px; padding: 10px; border: 1px solid #333; }
+  </style>
+</head>
+<body>
+  <h1 id="title">Xin chào DOM</h1>
+
+  <button onclick="changeTitle()">Đổi Title</button>
+  <button onclick="addParagraph()">Thêm đoạn văn</button>
+  <button onclick="changeInnerHTML()">Đổi bằng innerHTML</button>
+  <button onclick="changeInnerText()">Đổi bằng innerText</button>
+
+  <div id="content">
+    <p id="p1">Đây là đoạn văn bản ban đầu</p>
+  </div>
+
+  <script>
+    // getElementById
+    function changeTitle() {
+      let h1 = document.getElementById("title");
+      h1.innerText = "Tiêu đề đã đổi bằng getElementById!";
+    }
+
+    // createElement, createTextNode, appendChild
+    function addParagraph() {
+      let newP = document.createElement("p");               // tạo thẻ <p>
+      let textNode = document.createTextNode("Đoạn văn mới thêm bằng createElement + createTextNode!");
+      newP.appendChild(textNode);                           // thêm text vào <p>
+      document.getElementById("content").appendChild(newP); // thêm <p> vào div
+    }
+
+    // innerHTML
+    function changeInnerHTML() {
+      document.getElementById("p1").innerHTML = "<b>Đoạn văn đã đổi bằng innerHTML</b>";
+    }
+
+    // innerText
+    function changeInnerText() {
+      document.getElementById("p1").innerText = "<b>Đoạn văn đã đổi bằng innerText</b>";
+    }
+  </script>
+</body>
+</html>

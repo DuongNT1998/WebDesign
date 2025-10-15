@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Minh họa HTML5 Canvas — Demo</title>
+  <style>
+    body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; padding: 24px; }
+    h1 { font-size: 20px; margin-bottom: 6px; }
+    p { margin-top: 0; color: #333; }
+    .canvas-wrap { display:flex; gap:24px; align-items:flex-start; }
+    /* Kích thước hiển thị CSS khác với thuộc tính width/height của canvas
+       (thuộc tính canvas thiết lập kích thước 'bitmap' bên trong).
+       Ở ví dụ này ta hiển thị 300x300 bằng CSS nhưng canvas bitmap vẫn 200x200 */
+    .preview { border: 1px solid #ddd; padding: 10px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Các bước làm việc với &lt;canvas&gt;</h1>
+  <ol>
+    <li>Định nghĩa thành phần canvas trong HTML.</li>
+    <li>Đặt các thuộc tính: <code>id</code>, <code>width</code>, <code>height</code>, <code>class</code>, <code>name</code> (nếu cần).</li>
+    <li>Trong JavaScript: tham chiếu đến phần tử canvas và lấy <em>bối cảnh vẽ</em> (context) — gán vào 1 biến để vẽ.</li>
+    <li>Sử dụng API 2D (hoặc WebGL) để vẽ hình, chữ, ảnh, xử lý sự kiện, animation, v.v.</li>
+  </ol>
+
+  <hr />
+
+  <h2>Ví dụ minh họa (mở file này trong trình duyệt)</h2>
+  <div class="canvas-wrap">
+    <!-- Định nghĩa canvas: id, width, height, class, name -->
+    <div class="preview">
+      <canvas id="myCanvas" name="demoCanvas" class="my-canvas" width="200" height="200">
+        Trình duyệt không hỗ trợ canvas.
+      </canvas>
+      <p style="font-size:12px; color:#666; margin:8px 0 0">Canvas (bitmap) = 200 × 200 (thuộc tính)</p>
+    </div>
+
+    <!-- Ta có thể dùng CSS để thay đổi kích thước hiển thị (không thay đổi bitmap) -->
+    <div class="preview">
+      <canvas id="stretchedCanvas" class="my-canvas" width="200" height="200" style="width:300px; height:300px">
+        Trình duyệt không hỗ trợ canvas.
+      </canvas>
+      <p style="font-size:12px; color:#666; margin:8px 0 0">Hiển thị bằng CSS: 300 × 300 (css)</p>
+    </div>
+  </div>
+
+  <script>
+    // 1) Lấy phần tử canvas bằng id
+    const canvas = document.getElementById('myCanvas');
+
+    // 2) Lấy context 2D (bối cảnh vẽ) và gán vào 1 biến
+    //    Đây là "cổng" để tương tác với bitmap bên trong canvas
+    const ctx = canvas.getContext('2d');
+
+    // Kiểm tra an toàn: đảm bảo context tồn tại
+    if (!ctx) {
+      console.warn('2D context không được hỗ trợ trên trình duyệt này.');
+    }
+
+    // 3) Vẽ một số hình minh họa
+    // --- nền
+    ctx.fillStyle = '#f6f8fa';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // --- hình chữ nhật viền
+    ctx.strokeStyle = '#2b6cb0';
+    ctx.lineWidth = 4;
+    ctx.strokeRect(10, 10, 180, 120);
+
+    // --- hình filled circle
+    ctx.beginPath();
+    ctx.arc(100, 160, 28, 0, Math.PI * 2);
+    ctx.fillStyle = '#38a169';
+    ctx.fill();
+
+    // --- text
+    ctx.font = '14px Arial';
+    ctx.fillStyle = '#222';
+    ctx.fillText('ID: ' + canvas.id, 12, 32);
+    ctx.fillText('Size: ' + canvas.width + '×' + canvas.height, 12, 50);
+
+    // Ví dụ: truy xuất bằng class (nếu có nhiều canvas)
+    const firstByClass = document.querySelector('.my-canvas');
+    // Lấy context của canvas khác
+    const stretched = document.getElementById('stretchedCanvas');
+    const sCtx = stretched.getContext('2d');
+    sCtx.fillStyle = '#fff7ed';
+    sCtx.fillRect(0,0,stretched.width, stretched.height);
+    sCtx.fillStyle = '#dd6b20';
+    sCtx.fillRect(20,20,160,100);
+    sCtx.fillStyle = '#000';
+    sCtx.fillText('name: ' + stretched.getAttribute('name'), 22, 38); // name có thể null
+
+    // Sự khác nhau giữa thuộc tính width/height và CSS:
+    // - canvas.width/canvas.height là kích thước bitmap (số pixel nội bộ mà bạn vẽ lên)
+    // - style.width/style.height chỉ thay đổi kích thước hiển thị; khi tỉ lệ khác nhau, trình duyệt sẽ scale bitmap
+
+    // Thêm 1 ví dụ animation đơn giản (lặp vẽ)
+    let x = 20;
+    function animate() {
+      // xoá vùng chuyển động
+      ctx.clearRect(10, 70, 180, 80);
+      // vẽ một hình vuông di động
+      ctx.fillStyle = '#805ad5';
+      ctx.fillRect(x, 90, 20, 20);
+      x += 2;
+      if (x > 160) x = 10; // quay lại
+
+      requestAnimationFrame(animate);
+    }
+    requestAnimationFrame(animate);
+
+    // Bắt sự kiện chuột lên canvas
+    canvas.addEventListener('click', function (ev) {
+      // Lấy vị trí chuột tương đối với canvas (phải quy về pixel bitmap)
+      const rect = canvas.getBoundingClientRect();
+      const scaleX = canvas.width / rect.width;
+      const scaleY = canvas.height / rect.height;
+      const cx = (ev.clientX - rect.left) * scaleX;
+      const cy = (ev.clientY - rect.top) * scaleY;
+      ctx.fillStyle = '#e53e3e';
+      ctx.beginPath();
+      ctx.arc(cx, cy, 6, 0, Math.PI*2);
+      ctx.fill();
+    });
+
+    // Tóm tắt cách làm trong code:
+    // 1. <canvas id="myCanvas" width="200" height="200"></canvas>
+    // 2. const canvas = document.getElementById('myCanvas');
+    // 3. const ctx = canvas.getContext('2d');
+    // 4. ctx.fillRect / ctx.strokeRect / ctx.arc / ctx.fillText ... để vẽ
+  </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Ví dụ Interactive Content trong HTML5</title>
+</head>
+<body>
+    <header>
+        <h1>Interactive Content trong HTML5</h1>
+        <p>Các thẻ cho phép người dùng thao tác và tương tác trực tiếp.</p>
+    </header>
+
+    <section>
+        <h2>1. Thẻ a</h2>
+        <p>Liên kết tương tác: <a href="https://www.example.com">Đi đến Example.com</a></p>
+    </section>
+
+    <section>
+        <h2>2. Thẻ button</h2>
+        <button>Nhấn vào đây</button>
+    </section>
+
+    <section>
+        <h2>3. Thẻ input, select, textarea</h2>
+        <form>
+            <label for="name">Tên:</label>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="course">Chọn khóa học:</label>
+            <select id="course" name="course">
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>JavaScript</option>
+            </select><br><br>
+
+            <label for="note">Ghi chú:</label><br>
+            <textarea id="note" rows="3" cols="30"></textarea><br><br>
+
+            <input type="submit" value="Gửi">
+        </form>
+    </section>
+
+    <section>
+        <h2>4. Thẻ details và summary</h2>
+        <details>
+            <summary>Click để xem chi tiết</summary>
+            <p>Đây là nội dung ẩn, chỉ hiển thị khi người dùng mở.</p>
+        </details>
+    </section>
+
+    <section>
+        <h2>5. Thẻ menu</h2>
+        <menu>
+            <li><button>Thêm</button></li>
+            <li><button>Sửa</button></li>
+            <li><button>Xóa</button></li>
+        </menu>
+    </section>
+
+    <section>
+        <h2>6. Thẻ img, audio, video (tương tác play/zoom)</h2>
+        <p>Ảnh có thể click chuột phải tải về: <img src="example.jpg" alt="Ảnh demo" width="150"></p>
+
+        <p>Âm thanh:</p>
+        <audio controls>
+            <source src="example.mp3" type="audio/mpeg">
+            Trình duyệt không hỗ trợ audio.
+        </audio>
+
+        <p>Video:</p>
+        <video width="300" controls>
+            <source src="example.mp4" type="video/mp4">
+            Trình duyệt không hỗ trợ video.
+        </video>
+    </section>
+
+    <section>
+        <h2>7. Thẻ embed và object</h2>
+        <p>Nhúng file PDF bằng embed:</p>
+        <embed src="example.pdf" width="300" height="200" type="application/pdf">
+
+        <p>Nhúng file PDF bằng object:</p>
+        <object data="example.pdf" type="application/pdf" width="300" height="200">
+            Không thể hiển thị PDF.
+        </object>
+    </section>
+
+    <!-- keygen đã bị loại bỏ trong HTML5.2 nên chỉ để minh họa -->
+    <section>
+        <h2>8. Thẻ keygen (đã lỗi thời)</h2>
+        <p><i>Thẻ này không còn được hỗ trợ trong HTML5.2 trở lên.</i></p>
+        <form>
+            <label>Tạo cặp khóa:</label>
+            <keygen name="name_key">
+        </form>
+    </section>
+</body>
+</html>

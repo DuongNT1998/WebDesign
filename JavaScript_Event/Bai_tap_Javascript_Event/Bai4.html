@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số ký tự</title>
+    <script language="JavaScript">
+function KiemTra() {
+ if (frm.NoiDung.value.length > 200)
+alert("Bạn đã gõ qúa số ký tự cho phép !");
+ frm.SoKyTu.value = frm.NoiDung.value.length;
+}
+</script>
+</head>
+<body style="font-family:arial"><form name="frm">
+Số ký tự đã gõ : <input type="text" name="SoKyTu"> <BR>
+<textarea name="NoiDung" cols="50" rows="10"
+onKeyUp="KiemTra();"> </textarea></form>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!-- layout-float-clear-overflow-demo.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Demo CSS Layout — float, clear, overflow:auto</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#0f1724; color:#e6eef8; margin:24px; }
+    h1 { font-size:1.4rem; margin-bottom:1rem; }
+
+    .box {
+      width:120px; height:80px;
+      background:#38bdf8; color:#0f1724;
+      text-align:center; line-height:80px;
+      margin:6px; border:2px solid #0ea5e9;
+    }
+
+    /* float */
+    .left { float:left; }
+    .right { float:right; }
+
+    /* clear */
+    .clear-both { clear:both; background:#22c55e; color:#fff; }
+
+    /* overflow */
+    .overflow-container {
+      width:250px; height:100px;
+      border:2px dashed #facc15;
+      background:#1e293b;
+      overflow:auto;
+      padding:8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Layout — float, clear, overflow:auto</h1>
+
+  <h3>1) float: left / right</h3>
+  <div class="box left">float:left</div>
+  <div class="box right">float:right</div>
+  <p class="clear-both">Đoạn văn này dùng clear:both để xuống dưới, không bị bao quanh bởi float.</p>
+
+  <h3>2) overflow:auto</h3>
+  <div class="overflow-container">
+    Đây là ví dụ về <code>overflow:auto</code>. Nội dung này rất dài, được lặp lại để vượt quá chiều cao của khung. Nội dung này rất dài, được lặp lại để vượt quá chiều cao của khung. Nội dung này rất dài, được lặp lại để vượt quá chiều cao của khung.
+  </div>
+</body>
+</html>

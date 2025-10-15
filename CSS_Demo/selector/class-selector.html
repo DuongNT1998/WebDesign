@@ -1,0 +1,100 @@
+<!-- demo-class-selector.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Demo Class Selector trong CSS</title>
+  <style>
+    /* -----------------------------
+       Class selectors (bắt đầu bằng .)
+       ----------------------------- */
+    .highlight {
+      background: #fffbe6;
+      padding: 4px 6px;
+      border-radius: 4px;
+    }
+
+    .note {
+      color: #0b63ff;
+      font-style: italic;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      text-decoration: none;
+      margin: 4px 0;
+    }
+
+    /* class kết hợp style riêng */
+    .btn-primary {
+      background: #0b63ff;
+      color: white;
+    }
+
+    .btn-secondary {
+      background: #e5e7eb;
+      color: #111827;
+    }
+
+    /* Có thể gắn nhiều class trên 1 element */
+    .shadow {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    /* -----------------------------
+       Layout cơ bản
+       ----------------------------- */
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      margin: 24px;
+      background: #f8fafc;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 16px;
+      border-bottom: 2px solid #e5e7eb;
+    }
+
+    article {
+      background: #ffffff;
+      padding: 16px;
+      border-radius: 8px;
+      margin-top: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="highlight">Demo Class Selector</h1>
+    <p>Class selector dùng dấu <code>.</code> trước tên class, ví dụ: <code>.highlight</code></p>
+  </header>
+
+  <main>
+    <article>
+      <h2>Ví dụ văn bản</h2>
+      <p>Đây là một đoạn văn <span class="highlight">có class highlight</span> để làm nổi bật.</p>
+      <p>Thêm một đoạn với <span class="note">class note</span> để hiển thị chữ nghiêng xanh.</p>
+    </article>
+
+    <article>
+      <h2>Ví dụ button</h2>
+      <p>
+        <button class="btn btn-primary">Nút chính</button>
+        <button class="btn btn-secondary">Nút phụ</button>
+      </p>
+      <p>
+        <button class="btn btn-primary shadow">Nút chính có shadow</button>
+      </p>
+    </article>
+  </main>
+</body>
+</html>

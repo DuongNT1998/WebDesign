@@ -1,0 +1,75 @@
+<!-- File: window_demo.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo Window Object</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h2 { color: darkblue; }
+    pre { background: #f4f4f4; padding: 10px; border-radius: 5px; }
+    button { margin: 5px; padding: 8px 12px; }
+  </style>
+</head>
+<body>
+  <h1>Demo các đối tượng trong Window</h1>
+
+  <h2>1. document object</h2>
+  <p id="demo-doc"></p>
+
+  <h2>2. event object</h2>
+  <button onclick="showEvent(event)">Click để xem event</button>
+  <p id="demo-event"></p>
+
+  <h2>3. frame object</h2>
+  <iframe src="https://www.example.com" width="400" height="150"></iframe>
+  <p>Truy cập frame qua <code>window.frames[0]</code></p>
+
+  <h2>4. history object</h2>
+  <button onclick="window.alert('abcde')">Quay lại (Back)</button>
+  <button onclick="history.forward()">Đi tới (Forward)</button>
+  <p>Độ dài lịch sử: <span id="demo-history"></span></p>
+
+  <h2>5. location object</h2>
+  <p>URL hiện tại: <span id="demo-location"></span></p>
+  <button onclick="window.location.reload()">Reload trang</button>
+
+  <h2>6. navigator object</h2>
+  <pre id="demo-navigator"></pre>
+
+  <h2>7. screen object</h2>
+  <pre id="demo-screen"></pre>
+
+  <script>
+    // document
+    document.getElementById("demo-doc").innerText =
+      "Tiêu đề tài liệu: " + document.title;
+
+    // event
+    function showEvent(e) {
+      document.getElementById("demo-event").innerText =
+        "Event type: " + e.type + ", Target: " + e.target.tagName;
+    }
+
+    // history
+    document.getElementById("demo-history").innerText = history.length;
+
+    // location
+    document.getElementById("demo-location").innerText = window.location.href;
+
+    // navigator
+    let navInfo = 
+      "User Agent: " + navigator.userAgent + "\n" +
+      "Ngôn ngữ: " + navigator.language + "\n" +
+      "Online: " + navigator.onLine;
+    document.getElementById("demo-navigator").innerText = navInfo;
+
+    // screen
+    let screenInfo =
+      "Chiều rộng: " + screen.width + "\n" +
+      "Chiều cao: " + screen.height + "\n" +
+      "Màu sắc: " + screen.colorDepth + " bit";
+    document.getElementById("demo-screen").innerText = screenInfo;
+  </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Ví dụ Form trong HTML5</title>
+</head>
+<body>
+    <header>
+        <h1>Form trong HTML5</h1>
+    </header>
+    
+
+    <!-- Form cơ bản -->
+    <form id="demoForm" action="submit.html" method="post" novalidate>
+        <h2>1. Các input mới trong HTML5</h2>
+        <p>Email: <input type="email" name="email" placeholder="Nhập email" required></p>
+        <p>Số điện thoại: <input type="tel" name="tel" placeholder="090xxxxxxx"></p>
+        <p>URL: <input type="url" name="url" placeholder="https://example.com"></p>
+        <p>Số: <input type="number" name="number" min="3" max="10"></p>
+        <p>Thanh trượt: <input type="range" name="range" min="3" max="10"></p>
+        <p>Ngày & Giờ (local): <input type="datetime-local" name="dtlocal"></p>
+        <p>Ngày: <input type="date" name="date"></p>
+        <p>Tháng: <input type="month" name="month"></p>
+        <p>Tuần: <input type="week" name="week"></p>
+        <p>Giờ: <input type="time" name="time"></p>
+        <p>Màu sắc: <input type="color" name="color"></p>
+
+        <h2>2. Thuộc tính datalist</h2>
+        <p>Chọn trình duyệt: 
+            <input list="browsers" name="browser">
+            <datalist id="browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Edge">
+                <option value="Safari">
+                <option value="Opera">
+            </datalist>
+        </p>
+
+        <h2>3. Các thuộc tính ràng buộc</h2>
+        <p>Mật khẩu (pattern, required, placeholder): 
+            <input type="password" name="pwd" pattern="[A-Za-z0-9]{6,}" 
+                   placeholder="Tối thiểu 6 ký tự" required>
+        </p>
+
+        <h2>4. Các thuộc tính nâng cao</h2>
+        <p>Input autofocus: <input type="text" name="focusInput" autofocus></p>
+
+        <p>Input với list: 
+            <input type="text" name="city" list="cities">
+            <datalist id="cities">
+                <option value="Hà Nội">
+                <option value="TP. HCM">
+                <option value="Đà Nẵng">
+            </datalist>
+        </p>
+
+        <h2>5. Các thẻ đặc biệt</h2>
+        <!-- keygen: đã deprecated trong HTML5.2, chỉ để SV tham khảo -->
+        <p><i>Thẻ &lt;keygen&gt; (đã lỗi thời, không còn hỗ trợ):</i><br>
+            <keygen name="name_key">
+        </p>
+
+        <!-- output -->
+        <p>Tính toán: 
+            <input type="number" id="a" value="10"> +
+            <input type="number" id="b" value="5"> =
+            <output name="result" for="a b">15</output>
+        </p>
+
+        <h2>6. Các thuộc tính liên quan đến submit</h2>
+        <p>
+            <button type="submit" formaction="save.php">Lưu (formaction)</button>
+            <button type="submit" formmethod="get">Gửi bằng GET (formmethod)</button>
+            <button type="submit" formenctype="multipart/form-data">Upload file (formenctype)</button>
+            <button type="submit" formnovalidate>Gửi không kiểm tra (formnovalidate)</button>
+            <button type="submit" formtarget="_blank">Mở trong tab mới (formtarget)</button>
+        </p>
+    </form>
+</body>
+</html>

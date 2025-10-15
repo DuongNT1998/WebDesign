@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Light Bulb Toggle</title>
+<script>
+let bLight = 0;
+
+function changeimage() {
+  const img1 = document.getElementById("myimage");
+  if (bLight === 0) {
+    bLight = 1;
+    img1.src = "bulbon.gif";
+  } else {
+    bLight = 0;
+    img1.src = "bulboff.gif";
+  }
+}
+</script>
+</head>
+<body>
+  <img id="myimage" src="bulboff.gif" onclick="changeimage()" style="cursor:pointer;">
+</body>
+</html>

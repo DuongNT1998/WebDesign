@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Minh họa HTML5 Audio — Demo</title>
+</head>
+<body>
+  <h1>Thẻ &lt;audio&gt; trong HTML5</h1>
+  <ol>
+    <li>Sử dụng thẻ <code>&lt;audio&gt;</code> để nhúng âm thanh.</li>
+    <li>Bên trong có thể khai báo nhiều thẻ <code>&lt;source&gt;</code> với các định dạng khác nhau (mp3, ogg...).</li>
+    <li>Các thuộc tính phổ biến: <br>
+      <code>controls</code>, <code>autoplay</code>, <code>loop</code>, <code>preload</code>, <code>src</code>, <code>autobuffer</code>.
+    </li>
+  </ol>
+
+  <hr />
+
+  <h2>Ví dụ minh họa</h2>
+  <audio controls autoplay="true" loop preload="auto">
+    <source src="music1.mp3" type="audio/mpeg">
+    <source src="E:/Demo.ogg" type="audio/ogg">
+    Trình duyệt của bạn không hỗ trợ audio.
+  </audio>
+</body>
+</html>

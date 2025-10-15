@@ -1,0 +1,58 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+  padding: 20px;
+  background: #f7f7fb;
+  color: #222;
+}
+
+header h1 {
+  margin: 0 0 16px 0;
+}
+
+#product-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 16px 0;
+  max-width: 520px;
+}
+
+#product-list li {
+  background: #fff;
+  margin: 6px 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.product.highlight {
+  background: #fffbe6;
+  border-left: 4px solid #ffcc00;
+}
+
+.product.expensive {
+  background: #ffeef0;
+  border-left: 4px solid #ff5c77;
+}
+
+.controls button {
+  margin: 6px 6px 6px 0;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #1976d2;
+  color: white;
+}
+
+#log {
+  margin-top: 16px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  background: #111;
+  color: #9fef9f;
+  padding: 8px;
+  border-radius: 6px;
+  max-width: 720px;
+}

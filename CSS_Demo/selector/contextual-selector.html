@@ -1,0 +1,69 @@
+<!-- demo-contextual-selector.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Demo Contextual Selector</title>
+  <style>
+    /* 1. Descendant selector */
+    div p {
+      color: #0b63ff;
+    }
+
+    /* 2. Child selector */
+    div > p {
+      font-weight: bold;
+    }
+
+    /* 3. Adjacent sibling selector */
+    h2 + p {
+      background: #fff3cd;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+    /* 4. General sibling selector */
+    h2 ~ p {
+      border-left: 3px solid #0b63ff;
+      padding-left: 8px;
+    }
+
+    /* Layout cơ bản */
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      margin: 24px;
+      background: #f9fafb;
+      color: #111827;
+    }
+
+    section {
+      background: #ffffff;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>Demo Contextual Selectors</h1>
+
+  <section>
+    <h2>Descendant & Child</h2>
+    <div>
+      <p>Đây là p con trực tiếp của div (bold + xanh).</p>
+      <div>
+        <p>Đây là p hậu duệ (chỉ xanh, không bold).</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Adjacent + General sibling</h2>
+    <p>Đây là p ngay sau h2 (adjacent sibling → nền vàng nhạt).</p>
+    <p>Đây là p tiếp theo cùng cấp sau h2 (general sibling → có border trái).</p>
+    <p>Và thêm một p nữa cũng là general sibling.</p>
+  </section>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!-- boxmodel-margin-demo.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Demo Box Model — margin</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#0f1724; color:#e6eef8; margin:24px; }
+    h1 { font-size:1.4rem; margin-bottom:.5rem; }
+
+    .container { background:#1e293b; padding:10px; }
+
+    .box {
+      width:150px;
+      background:#334155;
+      border:2px solid #38bdf8;
+      color:#e6eef8;
+      text-align:center;
+    }
+    .m10 { margin:10px; }
+    .m20-5 { margin:20px 5px; }
+    .m10-30-5-15 { margin:10px 30px 5px 15px; }
+  </style>
+</head>
+<body>
+  <h1>Box Model — margin</h1>
+
+  <div class="container">
+    <div class="box m10">margin: 10px</div>
+    <div class="box m20-5">margin: 20px 5px</div>
+    <div class="box m10-30-5-15">margin: 10px 30px 5px 15px</div>
+  </div>
+</body>
+</html>

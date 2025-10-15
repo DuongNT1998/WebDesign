@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Xử lý sự kiện - Hàm JS</title>
+  <script>
+    function loaded() {
+      alert("Trang đã load xong!");
+    }
+    function clicked() {
+      alert("Bạn vừa click!");
+    }
+    function changed() {
+      alert("Bạn vừa đổi lựa chọn!");
+    }
+    function over(x) {
+      x.style.background = "yellow";
+    }
+    function out(x) {
+      x.style.background = "white";
+    }
+    function keyDown() {
+      alert("Bạn vừa gõ phím!");
+    }
+  </script>
+</head>
+<body onload="loaded()">
+
+  <h2>Xử lý sự kiện bằng hàm JS</h2>
+
+  <!-- onclick -->
+  <button onclick="clicked()">Click me</button>
+  <br><br>
+
+  <!-- onchange -->
+  <select onchange="changed()">
+    <option>A</option>
+    <option>B</option>
+    <option>C</option>
+  </select>
+  <br><br>
+
+  <!-- onmouseover & onmouseout -->
+  <div 
+    onmouseover="over(this)" 
+    onmouseout="out(this)"
+    style="width:150px; height:50px; border:1px solid black; text-align:center; line-height:50px;">
+    Hover me
+  </div>
+  <br>
+
+  <!-- onkeydown -->
+  <input type="text" placeholder="Gõ phím..." onkeydown="keyDown()">
+
+</body>
+</html>

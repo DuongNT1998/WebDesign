@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Thẻ HTML - Tạo danh sách</title>
+</head>
+<body>
+
+  <h1>Các thẻ tạo danh sách</h1>
+  <p>HTML cung cấp nhiều thẻ để hiển thị danh sách: <code>&lt;ol&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;dl&gt;</code>, <code>&lt;menu&gt;</code>, <code>&lt;dir&gt;</code>.</p>
+  <hr />
+
+  <h2>1. Danh sách có thứ tự (&lt;ol&gt;)</h2>
+  <p>Dùng <code>&lt;ol&gt;</code> (Ordered List) để tạo danh sách có đánh số thứ tự. Bên trong dùng <code>&lt;li&gt;</code>.</p>
+
+  <ol>
+    <li>Bước 1: Chuẩn bị</li>
+    <li>Bước 2: Thực hiện</li>
+    <li>Bước 3: Hoàn thành</li>
+  </ol>
+
+  <p>Có thể đổi kiểu số bằng thuộc tính <code>type</code> (1, A, a, I, i):</p>
+  <ol type="A">
+    <li>Mục A</li>
+    <li>Mục B</li>
+  </ol>
+
+  <hr />
+
+  <h2>2. Danh sách không thứ tự (&lt;ul&gt;)</h2>
+  <p>Dùng <code>&lt;ul&gt;</code> (Unordered List) để tạo danh sách có dấu chấm đầu dòng.</p>
+
+  <ul>
+    <li>Táo</li>
+    <li>Cam</li>
+    <li>Nho</li>
+  </ul>
+
+  <hr />
+
+  <h2>3. Danh sách mô tả (&lt;dl&gt;)</h2>
+  <p><code>&lt;dl&gt;</code> (Description List) gồm:
+    <code>&lt;dt&gt;</code> (term: thuật ngữ) và 
+    <code>&lt;dd&gt;</code> (definition: định nghĩa).
+  </p>
+
+  <dl>
+    <dt>HTML</dt>
+    <dd>Ngôn ngữ đánh dấu siêu văn bản để tạo trang web.</dd>
+    <dt>CSS</dt>
+    <dd>Ngôn ngữ định kiểu để thiết kế giao diện web.</dd>
+  </dl>
+
+  <hr />
+
+  <h2>4. Thẻ &lt;menu&gt; (lịch sử)</h2>
+  <p>Thẻ <code>&lt;menu&gt;</code> từng được dùng để tạo danh sách giống <code>&lt;ul&gt;</code>. Trong HTML5 hiện đại, nó dùng cho menu ngữ cảnh hoặc toolbar, nhưng ta minh họa dạng cơ bản:</p>
+
+  <menu>
+    <li>Mở</li>
+    <li>Lưu</li>
+    <li>Thoát</li>
+  </menu>
+
+  <hr />
+
+  <h2>5. Thẻ &lt;dir&gt; (cũ)</h2>
+  <p>Thẻ <code>&lt;dir&gt;</code> từng dùng để liệt kê thư mục, nay đã bị loại bỏ (deprecated), nhưng ta vẫn có thể thử:</p>
+
+  <dir>
+    <li>Thư mục A</li>
+    <li>Thư mục B</li>
+  </dir>
+
+  <p><b>Lưu ý:</b> Cả <code>&lt;menu&gt;</code> và <code>&lt;dir&gt;</code> ít còn được dùng trong HTML hiện đại. Thay thế bằng <code>&lt;ul&gt;</code> là chuẩn nhất.</p>
+
+  <hr />
+
+
+
+</body>
+</html>

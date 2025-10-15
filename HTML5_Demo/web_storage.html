@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Minh họa HTML5 Web Storage — Demo</title>
+</head>
+<body>
+  <h1>Web Storage trong HTML5</h1>
+  <p>
+    Web Storage cho phép lưu trữ dữ liệu ngay trong trình duyệt của người dùng.<br>
+    Các đối tượng chính:
+  </p>
+  <ul>
+    <li><b>localStorage</b>: lưu trữ dữ liệu không có thời hạn (khi đóng và mở lại trình duyệt vẫn còn).</li>
+    <li><b>sessionStorage</b>: lưu trữ dữ liệu chỉ cho 1 phiên làm việc (khi đóng tab/trình duyệt thì mất).</li>
+  </ul>
+
+  <h2>Kiểm tra trình duyệt có hỗ trợ:</h2>
+  <pre>
+if (typeof(Storage) !== "undefined") {
+  // Yes! localStorage and sessionStorage support!
+} else {
+  // Sorry! No web storage support..
+}
+  </pre>
+
+  <h2>Các phương thức chính:</h2>
+  <ul>
+    <li><code>setItem(key, value)</code>: Lưu dữ liệu</li>
+    <li><code>getItem(key)</code>: Lấy dữ liệu</li>
+    <li><code>removeItem(key)</code>: Xóa 1 mục</li>
+    <li><code>clear()</code>: Xóa toàn bộ dữ liệu</li>
+    <li><code>length</code>: Số lượng phần tử đã lưu</li>
+    <li><code>key(n)</code>: Trả về tên key theo chỉ số</li>
+  </ul>
+
+  <hr />
+
+  <h2>Ví dụ minh họa</h2>
+  <p>Mở Developer Tools (F12) &gt; Console để xem kết quả.</p>
+
+  <script>
+    if (typeof(Storage) !== "undefined") {
+      // Lưu dữ liệu vào localStorage
+      localStorage.setItem("username", "Nguyen Van A");
+
+      // Lấy dữ liệu từ localStorage
+      console.log("Username =", localStorage.getItem("username"));
+
+      // Lưu dữ liệu vào sessionStorage
+      sessionStorage.setItem("sessionID", "ABC123");
+      console.log("SessionID =", sessionStorage.getItem("sessionID"));
+
+      // Thử length và key(n)
+      console.log("localStorage length =", localStorage.length);
+      for (let i = 0; i < localStorage.length; i++) {
+        console.log("key(", i, ") =", localStorage.key(i));
+      }
+
+      // Xóa 1 mục
+      localStorage.removeItem("username");
+      console.log("Username sau khi remove =", localStorage.getItem("username"));
+
+      // Xóa toàn bộ
+      // localStorage.clear();
+    } else {
+      console.log("Sorry! No web storage support..");
+    }
+  </script>
+</body>
+</html>

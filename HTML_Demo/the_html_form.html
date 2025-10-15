@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Thẻ HTML - Form</title>
+</head>
+<body>
+
+  <h1>Các thẻ trong Form</h1>
+  <p>Form (biểu mẫu) cho phép người dùng nhập dữ liệu và gửi đến máy chủ xử lý.</p>
+
+
+
+  <form name="demoForm" action="xuly.php" method="post">
+    <fieldset>
+      <legend>Thông tin đăng nhập</legend>
+      
+      <!-- Text field -->
+      <label for="username">Tên đăng nhập:</label>
+      <input type="text" id="username" name="username" /><br /><br />
+
+      <!-- Password field -->
+      <label for="password">Mật khẩu:</label>
+      <input type="password" id="password" name="password" /><br /><br />
+
+      <!-- Hidden field -->
+      <input type="hidden" name="maSV" value="12345" />
+
+      <!-- Checkbox -->
+      <label>
+        <input type="checkbox" name="remember" /> Ghi nhớ đăng nhập
+      </label><br /><br />
+
+      <!-- Radio button -->
+      <p>Giới tính:</p>
+      <label><input type="radio" name="gender" value="male" /> NamMMMMMM</label>
+      <label><input type="radio" name="gender" value="female" /> Nữuuuuu</label><br /><br />
+      <!-- File form control -->
+      <label for="avatar">Chọn ảnh đại diện:</label>
+      <input type="file" id="avatar" name="avatar" /><br /><br />
+
+      <!-- Multiple-line text field -->
+      <label for="note">Ghi chú:</label><br />
+      <textarea id="note" name="note" rows="4" cols="40"></textarea><br /><br />
+      
+      <!-- Pull-down menu -->
+      <label for="lop">Chọn lớp:</label>
+      <select id="lop" name="lop">
+        <option value="ctk45">CTK45</option>
+        <option value="ctk46">CTK46</option>
+        <option value="ctk47">CTK47</option>
+      </select><br /><br />
+
+      <!-- Scrolled list -->
+      <label for="monhoc">Chọn môn học:</label><br />
+      <select id="monhoc" name="monhoc" size="4" multiple>
+        <option value="db">Cơ sở dữ liệu</option>
+        <option value="java">Lập trình Java</option>
+        <option value="web">Lập trình Web</option>
+        <option value="ai">Trí tuệ nhân tạo</option>
+      </select><br /><br />
+
+      <!-- Buttons -->
+      <input type="submit" value="Gửi dữ liệu" />
+      <input type="reset" value="Xóa dữ liệu" />
+      <input type="button" value="Nút chung" onclick="alert('Bạn vừa nhấn nút!')" />
+    </fieldset>
+  </form>
+
+  <hr />
+
+
+</body>
+</html>

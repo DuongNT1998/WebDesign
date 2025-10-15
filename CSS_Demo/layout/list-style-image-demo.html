@@ -1,0 +1,33 @@
+<!-- list-style-image-demo.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Demo CSS List — list-style-image</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #0f1724; color: #e6eef8; margin: 24px; }
+    h1 { font-size: 1.4rem; margin-bottom: .5rem; }
+    .demo { background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px; }
+
+    .custom-list { list-style-image: url('https://upload.wikimedia.org/wikipedia/commons/7/70/Checkmark_green.svg'); }
+    .none { list-style-image: none; }
+  </style>
+</head>
+<body>
+  <h1>CSS List — list-style-image</h1>
+
+  <h3>1) Dùng hình ảnh</h3>
+  <ul class="demo custom-list">
+    <li>Mục A</li>
+    <li>Mục B</li>
+    <li>Mục C</li>
+  </ul>
+
+  <h3>2) Không dùng hình ảnh</h3>
+  <ul class="demo none">
+    <li>Mục A</li>
+    <li>Mục B</li>
+    <li>Mục C</li>
+  </ul>
+</body>
+</html>

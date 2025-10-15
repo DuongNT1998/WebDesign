@@ -1,0 +1,39 @@
+<!-- boxmodel-border-style-demo.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Demo Box Model — border-style</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#0f1724; color:#e6eef8; margin:24px; }
+    h1 { font-size:1.4rem; margin-bottom:.5rem; }
+
+    .box {
+      width:200px; padding:10px; margin:12px 0;
+      background:#1e293b; color:#e6eef8;
+    }
+    .none { border:3px none #38bdf8; }
+    .solid { border:3px solid #38bdf8; }
+    .dashed { border:3px dashed #38bdf8; }
+    .dotted { border:3px dotted #38bdf8; }
+    .double { border:6px double #38bdf8; }
+    .groove { border:6px groove #38bdf8; }
+    .ridge { border:6px ridge #38bdf8; }
+    .inset { border:6px inset #38bdf8; }
+    .outset { border:6px outset #38bdf8; }
+  </style>
+</head>
+<body>
+  <h1>Box Model — border-style</h1>
+
+  <div class="box none">border-style: none</div>
+  <div class="box solid">border-style: solid</div>
+  <div class="box dashed">border-style: dashed</div>
+  <div class="box dotted">border-style: dotted</div>
+  <div class="box double">border-style: double</div>
+  <div class="box groove">border-style: groove</div>
+  <div class="box ridge">border-style: ridge</div>
+  <div class="box inset">border-style: inset</div>
+  <div class="box outset">border-style: outset</div>
+</body>
+</html>

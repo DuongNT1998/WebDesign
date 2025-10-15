@@ -1,0 +1,30 @@
+<!-- boxmodel-padding-demo.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Demo Box Model — padding</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#0f1724; color:#e6eef8; margin:24px; }
+    h1 { font-size:1.4rem; margin-bottom:.5rem; }
+
+    .box {
+      width:200px;
+      border:2px solid #38bdf8;
+      background:#1e293b;
+      margin:12px 0;
+      color:#e6eef8;
+    }
+    .p10 { padding:10px; }
+    .p20-5 { padding:20px 5px; }
+    .p10-30-5-15 { padding:10px 30px 5px 15px; }
+  </style>
+</head>
+<body>
+  <h1>Box Model — padding</h1>
+
+  <div class="box p10">padding: 10px (tất cả các cạnh)</div>
+  <div class="box p20-5">padding: 20px 5px (trên/dưới và trái/phải)</div>
+  <div class="box p10-30-5-15">padding: 10px 30px 5px 15px (trên, phải, dưới, trái)</div>
+</body>
+</html>

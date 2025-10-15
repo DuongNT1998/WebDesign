@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Light Bulb Toggle</title>
+<script>
+let bLight = 0;
+
+function changeimage() {
+  const img = document.getElementById("myimage");
+  if (bLight === 0)//giả sử hình bóng đèn tắt 
+  {
+    bLight = 1;
+    img.src = "bulbon.gif";
+    document.bgColor="yellow";
+  } else {
+    bLight = 0;
+    img.src = "bulboff.gif";
+       document.bgColor="white";
+  }
+}
+</script>
+</head>
+<body>
+  <img id="myimage" src="bulboff.gif" onclick="changeimage()" style="cursor:pointer;">
+</body>
+</html>

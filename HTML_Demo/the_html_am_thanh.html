@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Thẻ HTML - Xử lý âm thanh</title>
+</head>
+<body>
+
+  <h1>Các thẻ xử lý âm thanh</h1>
+  <p>Trong HTML, có nhiều cách nhúng âm thanh vào trang web. Ở đây ta thực hành với <code>&lt;object&gt;</code>.</p>
+  <hr />
+
+  <h2>1. Thẻ &lt;object&gt; để nhúng âm thanh</h2>
+  <p>Thẻ <code>&lt;object&gt;</code> có thể nhúng nhiều loại dữ liệu (âm thanh, video, PDF...). Với âm thanh, cần chỉ định file nguồn và kiểu MIME.</p>
+
+  <p>Ví dụ: Nhúng một file MP3 vào trang (nếu có file <code>music.mp3</code> trong cùng thư mục):</p>
+
+  <object data="music.mp3" type="audio/mpeg" width="300" height="50">
+    Trình duyệt của bạn không hỗ trợ nhúng âm thanh bằng thẻ <code>&lt;object&gt;</code>.
+  </object>
+
+  <hr />
+
+  <h2>2. So sánh với thẻ &lt;audio&gt; (HTML5 hiện đại)</h2>
+  <p>Trong thực tế, người ta thường dùng <code>&lt;audio&gt;</code> thay vì <code>&lt;object&gt;</code> vì hỗ trợ tốt hơn.</p>
+
+  <audio controls>
+    <source src="music1.mp3" type="audio/mpeg">
+    Trình duyệt của bạn không hỗ trợ thẻ <code>&lt;audio&gt;</code>.
+  </audio>
+
+  <p><b>Giải thích:</b></p>
+  <ul>
+    <li><code>controls</code>: hiện nút Play, Pause, Âm lượng...</li>
+    <li><code>&lt;source&gt;</code>: khai báo file âm thanh và kiểu MIME (<code>audio/mpeg</code>, <code>audio/ogg</code>...)</li>
+  </ul>
+
+  <hr />
+
+
+
+</body>
+</html>

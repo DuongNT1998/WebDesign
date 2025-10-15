@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Child Filter Demo (jQuery)</title>
+
+  <!-- styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- jQuery (CDN) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Child Filter Demo (jQuery)</h1>
+
+    <section class="controls">
+      <div class="filter-group">
+        <h3>Màu (Color)</h3>
+        <label><input type="checkbox" data-filter-type="color" value="red"> Red</label>
+        <label><input type="checkbox" data-filter-type="color" value="blue"> Blue</label>
+        <label><input type="checkbox" data-filter-type="color" value="green"> Green</label>
+      </div>
+
+      <div class="filter-group">
+        <h3>Kích cỡ (Size)</h3>
+        <label><input type="checkbox" data-filter-type="size" value="s"> S</label>
+        <label><input type="checkbox" data-filter-type="size" value="m"> M</label>
+        <label><input type="checkbox" data-filter-type="size" value="l"> L</label>
+      </div>
+
+      <div class="filter-group">
+        <h3>Loại (Category)</h3>
+        <label><input type="checkbox" data-filter-type="category" value="shoes"> Shoes</label>
+        <label><input type="checkbox" data-filter-type="category" value="bag"> Bag</label>
+        <label><input type="checkbox" data-filter-type="category" value="hat"> Hat</label>
+      </div>
+
+      <div class="control-actions">
+        <button id="resetFilters">Reset</button>
+        <input id="searchInput" placeholder="Tìm theo tên sản phẩm..." />
+      </div>
+    </section>
+
+    <section class="products" id="productList">
+      <!-- Parent cards: each `.product-card` contains child tags as data attributes or elements -->
+      <article class="product-card" data-name="Red Runner" >
+        <h4 class="product-title">Red Runner</h4>
+        <div class="children">
+          <span class="chip" data-child-type="color" data-child-value="red">Red</span>
+          <span class="chip" data-child-type="size" data-child-value="m">M</span>
+          <span class="chip" data-child-type="category" data-child-value="shoes">Shoes</span>
+        </div>
+      </article>
+
+      <article class="product-card" data-name="Blue Classic Bag">
+        <h4 class="product-title">Blue Classic Bag</h4>
+        <div class="children">
+          <span class="chip" data-child-type="color" data-child-value="blue">Blue</span>
+          <span class="chip" data-child-type="size" data-child-value="l">L</span>
+          <span class="chip" data-child-type="category" data-child-value="bag">Bag</span>
+        </div>
+      </article>
+
+      <article class="product-card" data-name="Green Cap">
+        <h4 class="product-title">Green Cap</h4>
+        <div class="children">
+          <span class="chip" data-child-type="color" data-child-value="green">Green</span>
+          <span class="chip" data-child-type="size" data-child-value="s">S</span>
+          <span class="chip" data-child-type="category" data-child-value="hat">Hat</span>
+        </div>
+      </article>
+
+      <article class="product-card" data-name="Multi Sport Pack">
+        <h4 class="product-title">Multi Sport Pack</h4>
+        <div class="children">
+          <span class="chip" data-child-type="color" data-child-value="red">Red</span>
+          <span class="chip" data-child-type="color" data-child-value="blue">Blue</span>
+          <span class="chip" data-child-type="size" data-child-value="m">M</span>
+          <span class="chip" data-child-type="category" data-child-value="bag">Bag</span>
+        </div>
+      </article>
+
+      <article class="product-card" data-name="Classic Leather Shoe">
+        <h4 class="product-title">Classic Leather Shoe</h4>
+        <div class="children">
+          <span class="chip" data-child-type="color" data-child-value="blue">Blue</span>
+          <span class="chip" data-child-type="size" data-child-value="l">L</span>
+          <span class="chip" data-child-type="category" data-child-value="shoes">Shoes</span>
+        </div>
+      </article>
+
+    </section>
+  </div>
+
+  <!-- scripts -->
+  <script src="scripts.js"></script>
+</body>
+</html>

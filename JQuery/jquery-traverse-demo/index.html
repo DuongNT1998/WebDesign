@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>jQuery Traverse Demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>jQuery — Duyệt danh sách element (Traverse)</h1>
+  </header>
+
+  <main>
+    <section id="demo-area">
+      <h2>Danh sách sản phẩm</h2>
+      <ul id="product-list">
+        <li class="product" data-id="101"><span class="name">Giày Thể Thao</span> - <span class="price">650000</span></li>
+        <li class="product" data-id="102"><span class="name">Áo Polo</span> - <span class="price">250000</span></li>
+        <li class="product" data-id="103"><span class="name">Quần Jeans</span> - <span class="price">450000</span></li>
+        <li class="product" data-id="104"><span class="name">Mũ Lưỡi Trai</span> - <span class="price">150000</span></li>
+      </ul>
+
+      <div class="controls">
+        <button id="btn-iterate">Duyệt & Hiển thị console</button>
+        <button id="btn-highlight">Tô màu sản phẩm chẵn</button>
+        <button id="btn-find-expensive">Tìm & đánh dấu > 400k</button>
+        <button id="btn-children">Hiển thị children của UL</button>
+        <button id="btn-siblings">Hiển thị siblings của item 102</button>
+        <button id="btn-wrap">Bọc tên bằng &lt;strong&gt;</button>
+      </div>
+
+      <div id="log" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

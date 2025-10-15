@@ -1,0 +1,24 @@
+<html>
+ <head>
+<script language="javascript">
+
+function switchlight(){
+//var check = document.frmlight.chklight;
+var check = document.getElementById("checkboxx");
+if(check.checked){
+document.bgColor = 'white';}
+else{
+document.bgColor='black';
+check.innerHTML="<p style='color:white;'>The light switch</p>";
+}
+ }
+</script>
+ </head>
+
+ <body>
+<form name = frmlight>
+ <input id="checkboxx"  type="checkbox" name = "chklight"
+onClick="switchlight();">The light switch
+</form>
+ </body>
+</html>

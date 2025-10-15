@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Xử lý sự kiện - Thuộc tính</title>
+</head>
+<body onload="alert('Trang đã load xong!')">
+
+  <h2>Xử lý sự kiện bằng thuộc tính</h2>
+
+  <!-- onclick -->
+  <button onclick="alert('Bạn vừa click!')">Click me</button>
+  <br><br>
+
+  <!-- onchange -->
+  <select onchange="alert('Bạn vừa đổi lựa chọn!')">
+    <option>A</option>
+    <option>B</option>
+    <option>C</option>
+  </select>
+  <br><br>
+
+  <!-- onmouseover & onmouseout -->
+  <div 
+    onmouseover="this.style.background='yellow'" 
+    onmouseout="this.style.background='white'"
+    style="width:150px; height:50px; border:1px solid black; text-align:center; line-height:50px;">
+    Hover me
+  </div>
+  <br>
+
+  <!-- onkeydown -->
+  <input type="text" placeholder="Gõ phím..." onkeydown="alert('Bạn vừa gõ phím!')">
+
+</body>
+</html>

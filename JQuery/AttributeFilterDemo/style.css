@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 30px;
+    background-color: #f8f9fa;
+}
+
+h1 {
+    color: #333;
+}
+
+.filter-buttons {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.product-list img {
+    margin: 10px;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.product-list img:hover {
+    border-color: #007bff;
+}

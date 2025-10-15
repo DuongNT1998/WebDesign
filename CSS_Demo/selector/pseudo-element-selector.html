@@ -1,0 +1,77 @@
+<!-- demo-pseudo-element-selector.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Demo Pseudo-element Selector</title>
+  <style>
+    /* -------------------------------
+       Pseudo-elements
+       ------------------------------- */
+
+    /* Chữ cái đầu tiên */
+    p::first-letter {
+      font-size: 200%;
+      color: #d32f2f;
+      font-weight: bold;
+    }
+
+    /* Dòng đầu tiên */
+    p::first-line {
+      text-transform: uppercase;
+      color: #0b63ff;
+    }
+
+    /* Before và After cho heading */
+    h2::before {
+      content: "★ ";
+      color: gold;
+    }
+    h2::after {
+      content: " ★";
+      color: gold;
+    }
+
+    /* Khi bôi đen chữ */
+    p::selection {
+      background: #ffeb3b;
+      color: black;
+    }
+
+    /* -------------------------------
+       Layout cơ bản
+       ------------------------------- */
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      margin: 24px;
+      background: #f8fafc;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    article {
+      background: white;
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Demo: Pseudo-element Selector</h1>
+  </header>
+
+  <main>
+    <article>
+      <h2>Tiêu đề có Before/After</h2>
+      <p>
+        Đây là đoạn văn bản ví dụ. Bạn hãy bôi đen thử một phần đoạn văn này để xem hiệu ứng <code>::selection</code>. 
+        Ngoài ra, dòng đầu tiên sẽ được in hoa và chữ cái đầu tiên sẽ được phóng to.
+      </p>
+    </article>
+  </main>
+</body>
+</html>

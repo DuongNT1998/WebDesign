@@ -1,0 +1,40 @@
+<!-- table-border-spacing-demo.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Demo CSS Table — border-spacing</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#0f1724; color:#e6eef8; margin:24px; }
+    h1 { font-size:1.4rem; margin-bottom:.5rem; }
+
+    table { background:#1e293b; margin-bottom:20px; }
+    th, td { border:1px solid #475569; padding:8px 14px; }
+
+    .spacing-0 { border-collapse: separate; border-spacing: 0; }
+    .spacing-10 { border-collapse: separate; border-spacing: 10px; }
+    .spacing-20-5 { border-collapse: separate; border-spacing: 20px 5px; }
+  </style>
+</head>
+<body>
+  <h1>CSS Table — border-spacing</h1>
+
+  <h3>1) border-spacing: 0</h3>
+  <table class="spacing-0">
+    <tr><th>A</th><th>B</th><th>C</th></tr>
+    <tr><td>1</td><td>2</td><td>3</td></tr>
+  </table>
+
+  <h3>2) border-spacing: 10px</h3>
+  <table class="spacing-10">
+    <tr><th>A</th><th>B</th><th>C</th></tr>
+    <tr><td>1</td><td>2</td><td>3</td></tr>
+  </table>
+
+  <h3>3) border-spacing: 20px 5px</h3>
+  <table class="spacing-20-5">
+    <tr><th>A</th><th>B</th><th>C</th></tr>
+    <tr><td>1</td><td>2</td><td>3</td></tr>
+  </table>
+</body>
+</html>

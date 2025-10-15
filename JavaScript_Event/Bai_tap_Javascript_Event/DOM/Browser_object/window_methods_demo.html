@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo Window Methods</title>
+</head>
+<body>
+  <h1>Demo các phương thức & thuộc tính cơ bản của window</h1>
+  <button onclick="demoAlert()">Alert</button>
+  <button onclick="demoConfirm()">Confirm</button>
+  <button onclick="demoPrompt()">Prompt</button>
+  <button onclick="demoTimeout()">setTimeout</button>
+  <button onclick="demoInterval()">setInterval</button>
+
+  <script>
+    function demoAlert() {
+      window.alert("Xin chào từ window.alert!");
+    }
+
+    function demoConfirm() {
+      let ok = window.confirm("Bạn có chắc chắn không?");
+      alert("Kết quả: " + ok);
+    }
+
+    function demoPrompt() {
+      let name = window.prompt("Nhập tên của bạn:");
+      alert("Xin chào, " + name);
+    }
+
+    function demoTimeout() {
+      setTimeout(() => alert("Thông báo sau 2 giây!"), 2000);
+    }
+
+    function demoInterval() {
+      let count = 0;
+      let timer = setInterval(() => {
+        count++;
+        console.log("Interval lần: " + count);
+        if (count >= 5) clearInterval(timer);
+      }, 1000);
+    }
+
+    // In ra một vài thuộc tính
+    console.log("Kích thước trong: " + window.innerWidth + " x " + window.innerHeight);
+    console.log("URL hiện tại: " + window.location.href);
+    console.log("Tên trình duyệt: " + window.navigator.userAgent);
+  </script>
+</body>
+</html>

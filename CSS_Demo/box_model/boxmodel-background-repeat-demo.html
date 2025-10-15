@@ -1,0 +1,32 @@
+<!-- boxmodel-background-repeat-demo.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Demo Box Model — background-repeat</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#0f1724; color:black; margin:24px; }
+    h1 { font-size:1.4rem; margin-bottom:.5rem; }
+
+    .box {
+      width:250px; height:120px;
+      border:2px solid #38bdf8;
+      margin:12px 0;
+      background-image:url("https://upload.wikimedia.org/wikipedia/en/d/df/Kaito_Kid_by_Gosho_Aoyama.jpg");
+      background-color:#1e293b;
+    }
+    .repeat { background-repeat: repeat; }
+    .repeat-x { background-repeat: repeat-x; }
+    .repeat-y { background-repeat: repeat-y; }
+    .no-repeat { background-repeat: no-repeat; }
+  </style>
+</head>
+<body>
+  <h1>Box Model — background-repeat</h1>
+
+  <div class="box repeat">repeat</div>
+  <div class="box repeat-x">repeat-x</div>
+  <div class="box repeat-y">repeat-y</div>
+  <div class="box no-repeat">no-repeat</div>
+</body>
+</html>

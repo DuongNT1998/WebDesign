@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Form Selector trong jQuery</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <h1>Demo Form Selector trong jQuery</h1>
+
+    <form id="demoForm">
+        <label>Tên đăng nhập:</label>
+        <input type="text" name="username"><br>
+
+        <label>Mật khẩu:</label>
+        <input type="password" name="password"><br>
+
+        <label>Giới tính:</label>
+        <input type="radio" name="gender" value="Nam"> Nam
+        <input type="radio" name="gender" value="Nữ"> Nữ<br>
+
+        <label>Sở thích:</label>
+        <input type="checkbox" name="hobby" value="Đọc sách"> Đọc sách
+        <input type="checkbox" name="hobby" value="Du lịch"> Du lịch<br>
+
+        <label>Ảnh đại diện:</label>
+        <input type="file" name="avatar"><br>
+
+        <input type="submit" value="Gửi">
+        <input type="reset" value="Xóa">
+        <input type="image" src="https://via.placeholder.com/60" alt="Submit Image">
+        <button type="button" id="btnTest">Nút Thường</button>
+    </form>
+
+    <div id="result"></div>
+
+</body>
+</html>
