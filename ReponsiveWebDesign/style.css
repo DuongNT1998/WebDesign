@@ -1,0 +1,105 @@
+ /* ==========================
+       Thiết lập cơ bản (reset nhẹ)
+       ========================== */
+    :root{
+      /* biến màu & base spacing */
+      --brand: #0066cc;
+      --muted: #6b7280;
+      --bg: #f8fafc;
+      --max-width: 1200px;
+      --gutter: 1.5rem; /* rem-based padding */
+      --radius: 12px;
+      /* font size base (điểm tham chiếu cho rem) */
+      font-size: 16px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;color:#0f172a;background:var(--bg)}
+
+    /* ===========
+       Layout chính
+       =========== */
+    .container{
+      /* fluid container: dùng % + max-width */
+      width:90%;
+      max-width:var(--max-width);
+      margin:0 auto;
+      padding: calc(var(--gutter) * 0.75) 0;
+    }
+
+    header{
+      background:linear-gradient(90deg,var(--brand),#4f46e5);
+      color:white;padding:0.75rem 0;position:sticky;top:0;z-index:20;backdrop-filter: blur(6px);
+    }
+    .brand-row{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .brand{display:flex;align-items:center;gap:.75rem}
+    .logo{width:40px;height:40px;border-radius:8px;background:white;display:inline-grid;place-items:center;color:var(--brand);font-weight:700}
+    nav{display:flex;gap:1rem}
+    nav a{color:rgba(255,255,255,0.95);text-decoration:none;padding:.45rem .6rem;border-radius:8px;font-size:0.95rem}
+    nav a:hover{background:rgba(255,255,255,0.08)}
+
+    /* hamburger (mobile) */
+    .hamburger{display:none;background:transparent;border:0;color:white;font-size:1.25rem}
+
+    /* =======
+       Hero
+       ======= */
+    .hero{
+      display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;align-items:center;padding:2rem 0
+    }
+    .hero h1{font-size:clamp(1.6rem, 2.5vw, 2.8rem);margin:0 0 .5rem}
+    .lead{color:var(--muted);font-size:1rem;line-height:1.5}
+    .cta{margin-top:1rem}
+    .btn{display:inline-block;padding:.6rem 1rem;border-radius:10px;background:white;color:var(--brand);font-weight:600;text-decoration:none}
+
+    .hero-img{width:100%;border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 30px rgba(2,6,23,0.12)}
+    .hero-img img{display:block;width:100%;height:auto}
+
+    /* ========
+       Thẻ minh họa các đơn vị CSS
+       ======== */
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0}
+    .card{background:white;padding:1rem;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,.06)}
+    .card small{color:var(--muted)}
+
+    /* ========
+       Gallery responsive
+       ======== */
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:0.75rem}
+    .gallery img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+
+    /* ========
+       Footer
+       ======== */
+    footer{padding:2rem 0;color:var(--muted);font-size:0.95rem}
+
+    /* ==================================
+       MEDIA QUERIES: điểm phá vỡ phổ biến
+       - mobile-first: mặc định là desktop-lite
+       ================================== */
+    /* Mobile (<=768px): stack, hamburger, single column */
+    @media (max-width: 768px){
+      .hero{grid-template-columns:1fr;gap:1rem;padding:1rem 0}
+      nav{display:none}
+      .hamburger{display:inline-block}
+      .cards{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .hero-img img{height:240px;object-fit:cover}
+    }
+
+    /* Small tablet: <= 992px */
+    @media (max-width: 992px){
+      .cards{grid-template-columns:repeat(2,1fr)}
+      .gallery{grid-template-columns:repeat(3,1fr)}
+    }
+
+    /* Large screens: use vw-based horizontal padding and more columns */
+    @media (min-width: 1200px){
+      .container{width:80%}
+      .gallery img{height:200px}
+    }
+
+    /* Example: show different font-size using 'em' relative to parent */
+    .card .example-em{font-size:1.2em}
+
+    /* small utility */
+    .muted{color:var(--muted)}
