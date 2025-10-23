@@ -6,11 +6,12 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-  <h2>📒 Danh sách ghi chú</h2>
+  <h2>Danh sách ghi chú</h2>
   <button id="loadNotes">Tải ghi chú (GET)</button>
-  <ul id="noteList"></ul>
-
-  <h3>➕ Thêm ghi chú mới</h3>
+  <table id="noteList" border="1" cellpadding="8" cellspacing="2" width="60%" align="center">
+   
+  </table>
+  <h3>Thêm ghi chú mới</h3>
   <input type="text" id="title" placeholder="Tiêu đề"><br>
   <input type="text" id="content" placeholder="Nội dung"><br>
   <button id="addNote">Gửi ghi chú (POST)</button>
